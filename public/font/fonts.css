@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 100 700;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('SF_Pro_Display/SF-Pro-Display-Regular.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Bold';
+  src: url('SF_Pro_Display/SF-Pro-Display-Bold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 100 300;
+  font-display: swap;
+  font-style: light;
+  font-named-instance: 'Semibold';
+  src: url('SF_Pro_Display/SF-Pro-Display-Semibold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Arima Madurai';
+  font-weight: 100 300;
+  font-display: swap;
+  font-style: light;
+  font-named-instance: 'Regular';
+  src: url('Arima_Madurai/ArimaMadurai-Regular.ttf') format('ttf');
+}
