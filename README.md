@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # `Vite 2.x + Vue 3.x + Tailwind 2.x starter ⚡`
 
 ![Vite, Vue, Tailwind CSS](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
@@ -49,3 +50,6 @@ yarn serve
 - [base.css](https://github.com/web2033/base.css) (base styles for Tailwind CSS and other projects as an NPM package)
 - [Pinia](https://pinia.esm.dev/introduction.html) - state-management alternative to Vuex 4 with a similar to upcoming Vuex 5 API
 - [VueUse](https://vueuse.org/functions.html) - collection of essential Vue Composition Utilities
+=======
+# devsite-vue
+>>>>>>> 517dcb8eb14ab2f7ea0e50138b8948b8ab0edc30
