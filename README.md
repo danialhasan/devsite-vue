@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0bc44268-2f0c-4380-a0ac-55d7d97b9729/deploy-status)](https://app.netlify.com/sites/devsite-vue/deploys)
+
 # `Vite 2.x + Vue 3.x + Tailwind 2.x starter ⚡`
 
 ![Vite, Vue, Tailwind CSS](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
