@@ -91,13 +91,14 @@ export default {
             Danial Hasan
           </h3>
           <div class="flex flex-row justify-center w-auto h-auto">
-            <a href="https://www.instagram.com/danialhasan752"
+            <a href="https://www.instagram.com/dhasandev"
               ><img
                 class="w-11 h-11 mx-2"
-                src="assets/insta.svg"
+                src="/assets/insta.svg"
                 alt="Instagram"
                 srcset=""
             /></a>
+            <!-- NOTE: IMAGE SRC ATTRIBUTES MUST HAVE /ASSETS AT FRONT, NOT ASSETS, OTHERWISE BUILD WILL FAIL. -->
             <a href="https://www.linkedin.com/in/danial-hasan-0bb166182/"
               ><img
                 class="w-11 h-11 mx-2"
@@ -152,7 +153,7 @@ export default {
     </div>
     <div
       id="desktop_footer"
-      class="hidden lg:flex justify-center xl:max-w-screen-xl xl:mx-auto  w-full"
+      class="hidden lg:flex justify-center xl:max-w-screen-xl xl:mx-auto w-full"
     >
       <div id="footer_left" class="w-1/2 flex flex-col px-8">
         <div class="w-full h-auto">
@@ -165,7 +166,7 @@ export default {
               Danial Hasan
             </h3>
             <div class="flex flex-row justify-center w-auto h-auto">
-              <a href="https://www.instagram.com/danialhasan752"
+              <a href="https://www.instagram.com/dhasandev"
                 ><img
                   class="w-11 h-11 mx-2"
                   src="assets/insta.svg"
