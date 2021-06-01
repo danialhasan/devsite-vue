@@ -26,8 +26,8 @@ export default {
 };
 </script>
 <template>
-  <div class="border-2 border-soft-black-background flex flex-col">
-    <div class="w-full h-1/2">
+  <div class="border-2 border-soft-black-background flex flex-col lg:h-full">
+    <div class="w-full h-1/2 lg:h-auto lg:flex-grow">
       <img
         class="w-full h-full"
         :src="this.image"
@@ -35,7 +35,7 @@ export default {
         srcset=""
       />
     </div>
-    <div class="w-full h-1/2 py-4 px-6 bg-white">
+    <div class="w-full h-1/2 py-4 px-6 bg-white lg:h-auto">
       <p class="text-2xl font-bold">{{ this.title }}</p>
       <p class="text-md py-2">{{ this.description }}</p>
       <div class="flex flex-row w-full h-auto pt-4">

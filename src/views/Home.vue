@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar.vue";
 import ContactButton from "@/components/ContactButton.vue";
 import ResumeButton from "@/components/ResumeButton.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default defineComponent({
   data() {
@@ -45,7 +46,14 @@ export default defineComponent({
       ],
     };
   },
-  components: { ButtonRepo, Navbar, ContactButton, ResumeButton, ProjectCard },
+  components: {
+    ButtonRepo,
+    Navbar,
+    ContactButton,
+    ResumeButton,
+    ProjectCard,
+    FooterComponent,
+  },
 });
 </script>
 
@@ -55,7 +63,7 @@ export default defineComponent({
     <div id="header" class="font-bold text-center w-full h-auto mt-32">
       <h1 class="text-5xl">I'm Danial.</h1>
       <h2 class="text-2xl my-4 px-24">I'm a full stack web developer.</h2>
-      <div class="w-full h-auto flex flex-col justify-center mt-12">
+      <div class="w-full h-auto flex flex-col lg:flex-row justify-center mt-12">
         <contact-button />
         <resume-button />
       </div>
@@ -68,8 +76,14 @@ export default defineComponent({
     </div>
     <div id="projects" class="w-full h-auto">
       <h2 class="font-bold text-4xl text-center my-12">Projects</h2>
-      <div class="w-full h-auto px-4 flex flex-col space-y-10">
-        <div v-for="project in this.projects" :key="project">
+      <div
+        class="w-full max-w-screen-md lg:max-w-screen-lg mx-auto h-auto px-4 md:px-16 flex flex-col lg:flex-row lg:flex-wrap lg:justify-evenly lg:items-stretch space-y-10 lg:space-y-0"
+      >
+        <div
+          v-for="project in this.projects"
+          :key="project"
+          class="lg:max-w-[440px] lg:h-auto lg:p-4"
+        >
           <project-card
             :image="project.image"
             :title="project.name"
@@ -79,118 +93,51 @@ export default defineComponent({
         </div>
       </div>
     </div>
-    <div id="skillset" class="w-full h-auto pt-16">
+    <div id="skillset" class="w-full h-auto my-44">
       <h2 class="font-bold text-4xl text-center my-12">Skillset</h2>
       <!-- Need to redesign and redo this. This part is a temporary placeholder. -->
-      <div
-        class="border-2 border-soft-black-background bg-white w-full h-auto flex flex-col"
-      >
-        <div class="w-full h-auto pt-8">
-          <h3 class="text-2xl text-center font-bold">Front End</h3>
-          <ul class="pl-8 pt-3 list-inside list-disc">
-            <li>Javascript</li>
-            <li>
-              CSS
-              <ul class="list-inside list-disc ml-4">
-                <li>TailwindCSS</li>
-              </ul>
-            </li>
-            <li>HTML</li>
-          </ul>
-        </div>
-        <div class="w-full h-auto pt-6">
-          <h3 class="text-2xl text-center font-bold">Back End</h3>
-          <ul class="pb-8 pl-8 pt-3 list-inside list-disc space-y-5">
-            <li>
-              Javascript
-              <ul class="list-inside list-disc ml-4">
-                <li>NodeJS</li>
-                <li>ExpressJS</li>
-                <li>VueJS</li>
-              </ul>
-            </li>
-            <li>
-              API Integration
-              <ul class="list-inside list-disc ml-4">
-                <li>CoinMarketCap</li>
-                <li>Stripe</li>
-                <li>Ethplorer</li>
-              </ul>
-            </li>
-            <li>MongoDB Integration</li>
-          </ul>
+      <div class="w-full h-auto px-2">
+        <div
+          class="flex flex-col md:flex-row md:justify-center md:pt-4 md:max-w-screen-sm md:mx-auto border-soft-black-background bg-white border-2"
+        >
+          <div class="w-full h-auto md:w-[230px] pt-8 md:p-0">
+            <h3 class="text-2xl text-center font-bold">Front End</h3>
+            <ul class="pl-8 pt-3 list-inside list-disc">
+              <li>Javascript</li>
+              <li>
+                CSS
+                <ul class="list-inside list-disc ml-4">
+                  <li>TailwindCSS</li>
+                </ul>
+              </li>
+              <li>HTML</li>
+            </ul>
+          </div>
+          <div class="w-full h-auto md:w-[230px] pt-6 md:p-0">
+            <h3 class="text-2xl text-center font-bold">Back End</h3>
+            <ul class="pb-8 pl-8 pt-3 list-inside list-disc space-y-5">
+              <li>
+                Javascript
+                <ul class="list-inside list-disc ml-4">
+                  <li>NodeJS</li>
+                  <li>ExpressJS</li>
+                  <li>VueJS</li>
+                </ul>
+              </li>
+              <li>
+                API Integration
+                <ul class="list-inside list-disc ml-4">
+                  <li>CoinMarketCap</li>
+                  <li>Stripe</li>
+                  <li>Ethplorer</li>
+                </ul>
+              </li>
+              <li>MongoDB Integration</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <footer class="w-full h-full pt-36">
-      <div class="w-full h-auto">
-        <h2 class="font-bold text-4xl text-center my-12">Contact Me</h2>
-
-        <div id="form_container" class="w-full h-auto">
-          <form
-            id="contactForm"
-            name="devsite-contact"
-            class="flex flex-col w-full h-full px-4 dark:text-black-2"
-          >
-            <input type="hidden" name="form-name" value="devsite-contact" />
-
-            <label
-              for="name"
-              class="uppercase font-sans font-bold pb-2 text-black-2 dark:text-white-1"
-              >Name</label
-            >
-            <input
-              type="text"
-              name="name"
-              id="name_input"
-              class="transition-all w-full h-12 rounded-lg pl-4 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
-              placeholder="Abel Tesfaye"
-              aria-required="false"
-            />
-
-            <label
-              for="email"
-              class="uppercase font-sans font-bold py-2 text-black-2 dark:text-white-1"
-              >Email</label
-            >
-            <input
-              type="email"
-              name="email"
-              id="email_input"
-              class="transition-all w-full h-12 rounded-lg pl-4 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
-              placeholder="zuck@facebook.com"
-              required
-              aria-required="true"
-            />
-
-            <label
-              for="message"
-              class="uppercase font-sans font-bold py-2 text-black-2 dark:text-white-1"
-              >Message</label
-            >
-            <textarea
-              type="text"
-              name="message"
-              id="message_input"
-              class="transition-all w-full h-36 rounded-lg pl-4 pt-3 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
-              placeholder="Enter your message here..."
-              required
-              aria-required="true"
-            ></textarea>
-            <div class="w-full h-auto mt-4">
-              <button
-                id="form_submit"
-                type="submit"
-                class="text-soft-white transition-all hover:-mt-1 hover:mb-1 float-right w-44 h-16 bg-accent-3 text-2xl active:bg-opacity-50 text-white-1 rounded-xl"
-              >
-                Send
-              </button>
-              <!-- TODO: Add ejs-flash or something to signal to the user that the message was successfully sent. -->
-              <!-- TODO: In the near future, replace the button form submit with an axios form submission, to prevent page redirect to /contactform. -->
-            </div>
-          </form>
-        </div>
-      </div>
-    </footer>
+    <footer-component />
   </div>
 </template>

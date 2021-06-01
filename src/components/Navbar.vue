@@ -22,17 +22,36 @@ export default {
 };
 </script>
 <template>
-  <nav class="w-full h-auto pt-12 xl:pt-0 flex justify-between px-5">
+  <nav
+    class="max-w-screen-2xl mx-auto w-full h-auto pt-12 xl:pt-0 flex justify-between px-5"
+  >
     <div
       id="logo"
-      class="xl:hidden font-bold font-sans text-lg dark:text-white-1 xl:mt-12"
+      class="xl:hidden font-bold font-sans text-lg dark:text-white-1 xl:mt-12 flex flex-row align-middle"
     >
-      <p><a href="/">Danial Hasan</a></p>
+      <img
+        src="/assets/favicons/favicon-32x32.png"
+        class="w-8 h-8 mr-3"
+        alt="Logo"
+      />
+
+      <p class="flex align-bottom items-end">
+        <a href="/">Danial Hasan</a>
+      </p>
     </div>
     <!-- ^ 'logo' -->
+    <div class="xl:hidden transform transition-all z-50">
+      <img
+        id="menu_button"
+        aria-label="menu"
+        src="/assets/menu_dark.svg"
+        alt="Menu Button"
+        @click="toggleMenu()"
+      />
+    </div>
     <div
       id="mobile_menu"
-      class="mobile_menu hidden z-50 fixed backdrop-filter backdrop-blur-sm top-0 left-0 w-full h-full bg-opacity-10 bg-black text-black-1 dark:text-white-1"
+      class="text-soft-white mobile_menu hidden z-50 fixed backdrop-filter backdrop-blur-sm backdrop-brightness-50 top-0 left-0 w-full h-full bg-opacity-10 bg-black text-black-1 dark:text-white-1"
       @click="toggleMenu()"
     >
       <!-- style="backdrop-filter: blur(15px); adds background blur to element in Chrome, not Safari.
@@ -46,17 +65,20 @@ export default {
         id="mobile_menu_list"
         class="text-center font-semibold mb-12 text-4xl"
       >
-        <li class="py-2 navListChild active:underline">
+        <li class="py-2 active:underline">
           <a href="#form_container" @click="autofocusForm()">Contact</a>
         </li>
-        <li class="py-2 navListChild active:underline">
+        <li class="py-2 active:underline">
           <a href="#projects_section">Projects</a>
         </li>
-        <li class="py-2 navListChild active:underline">
+        <li class="py-2 active:underline">
           <a href="#skillset_section">Skillset</a>
         </li>
-        <li class="py-2 navListChild active:underline">
+        <li class="py-2 active:underline">
           <a href="#projects_section">Resume</a>
+        </li>
+        <li class="py-2 active:underline">
+          <router-link to="/case-studies">Case Studies</router-link>
         </li>
         <li>
           <i
@@ -97,6 +119,9 @@ export default {
           >
             <a href="#projects_section">Resume</a>
           </li>
+          <li class="ml-14 py-2 active:underline">
+            <router-link to="/case-studies">Case Studies</router-link>
+          </li>
           <li>
             <i
               id="toggle_light_settings"
@@ -106,17 +131,6 @@ export default {
           </li>
         </ul>
       </div>
-    </div>
-
-    <div class="xl:hidden transform transition-all z-50">
-      <img
-        id="menu_button"
-        aria-label="menu"
-        src="/assets/menu_dark.svg"
-        alt="Menu Button"
-        @click="toggleMenu()"
-      />
-      <!-- TODO: Switch the src attr of this with the dark mode menu, when dark mode is activated. -->
     </div>
   </nav>
 </template>
