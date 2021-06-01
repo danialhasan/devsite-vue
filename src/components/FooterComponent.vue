@@ -102,14 +102,14 @@ export default {
             <a href="https://www.linkedin.com/in/danial-hasan-0bb166182/"
               ><img
                 class="w-11 h-11 mx-2"
-                src="assets/linkedin.png"
+                src="/assets/linkedin.png"
                 alt="LinkedIn"
                 srcset=""
             /></a>
             <a href="https://www.twitter.com/dhasandev"
               ><img
                 class="w-11 h-11 mx-2"
-                src="assets/twitter.svg"
+                src="/assets/twitter.svg"
                 alt="Twitter"
                 srcset=""
             /></a>
@@ -169,21 +169,21 @@ export default {
               <a href="https://www.instagram.com/dhasandev"
                 ><img
                   class="w-11 h-11 mx-2"
-                  src="assets/insta.svg"
+                  src="/assets/insta.svg"
                   alt="Instagram"
                   srcset=""
               /></a>
               <a href="https://www.linkedin.com/in/danial-hasan-0bb166182/"
                 ><img
                   class="w-11 h-11 mx-2"
-                  src="assets/linkedin.png"
+                  src="/assets/linkedin.png"
                   alt="LinkedIn"
                   srcset=""
               /></a>
               <a href="https://www.twitter.com/dhasandev"
                 ><img
                   class="w-11 h-11 mx-2"
-                  src="assets/twitter.svg"
+                  src="/assets/twitter.svg"
                   alt="Twitter"
                   srcset=""
               /></a>
