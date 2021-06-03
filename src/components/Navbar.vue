@@ -63,22 +63,27 @@ export default {
       </h2>
       <ul
         id="mobile_menu_list"
+        @click="toggleMenu()"
         class="text-center font-semibold mb-12 text-4xl"
       >
+      <!-- the a href can't scroll down to the section by linking to them, because we're using vue-router. We have to 
+      manually scroll with javascript.  -->
         <li class="py-2 active:underline">
-          <a href="#form_container" @click="autofocusForm()">Contact</a>
+          <a href="#" @click="this.toggleMenu()">Contact</a>
         </li>
         <li class="py-2 active:underline">
-          <a href="#projects_section">Projects</a>
+          <a href="#" @click="this.toggleMenu()">Projects</a>
         </li>
         <li class="py-2 active:underline">
-          <a href="#skillset_section">Skillset</a>
+          <a href="#" @click="this.toggleMenu()">Skillset</a>
         </li>
         <li class="py-2 active:underline">
-          <a href="#projects_section">Resume</a>
+          <a href="#" @click="this.toggleMenu()">Resume</a>
         </li>
         <li class="py-2 active:underline">
-          <router-link to="/case-studies">Case Studies</router-link>
+          <router-link to="/case-studies" @click="this.toggleMenu()"
+            >Case Studies</router-link
+          >
         </li>
         <li>
           <i
@@ -107,17 +112,17 @@ export default {
           <li
             class="ml-14 hover:text-black dark:hover:text-white hover:underline"
           >
-            <a href="#projects_section">Projects</a>
+            <a href="#projects_section" @click="toggleMenu()">Projects</a>
           </li>
           <li
             class="ml-14 hover:text-black dark:hover:text-white hover:underline"
           >
-            <a href="#skillset_section">Skillset</a>
+            <a href="#skillset_section" @click="toggleMenu()">Skillset</a>
           </li>
           <li
             class="ml-14 hover:text-black dark:hover:text-white hover:underline"
           >
-            <a href="#projects_section">Resume</a>
+            <a href="#projects_section" @click="toggleMenu()">Resume</a>
           </li>
           <li class="ml-14 py-2 active:underline">
             <router-link to="/case-studies">Case Studies</router-link>
