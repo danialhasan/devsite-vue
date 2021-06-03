@@ -73,9 +73,24 @@ export default defineComponent({
         document.getElementById("desktop_name_input").focus();
       }
     }, //refactor later
-    scrollToSection(section){
-      
-    }
+    scrollToSection(section) {
+      // This scrolling is to be done after the page has been set to / either through router link or window.location. 
+      // if using window.location, check window url first to make sure youre not unnecessarily refreshing the page. 
+      switch (section) {
+        case contact:
+          scrollToForm();
+          break;
+        case projects:
+          break;
+        case skillset:
+          break;
+        case resume:
+          break;
+
+        default:
+          break;
+      }
+    },
   },
 });
 </script>
@@ -83,7 +98,7 @@ export default defineComponent({
 <template>
   <div>
     <banner />
-    <navbar />
+    <navbar @mobileNavigationTo="scrollToSection" />
     <div id="header" class="font-bold text-center w-full h-auto mt-32">
       <h1 class="text-5xl">I'm Danial.</h1>
       <h2 class="text-2xl my-4 px-24">I'm a full stack web developer.</h2>

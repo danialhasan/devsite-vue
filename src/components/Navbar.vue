@@ -19,6 +19,7 @@ export default {
       body.classList.toggle("overflow-hidden");
     },
   },
+  emits: ["mobileNavigationTo"],
 };
 </script>
 <template>
@@ -66,22 +67,59 @@ export default {
         @click="toggleMenu()"
         class="text-center font-semibold mb-12 text-4xl"
       >
-      <!-- the a href can't scroll down to the section by linking to them, because we're using vue-router. We have to 
-      manually scroll with javascript.  -->
+        <!--
+        the a href can't scroll down to the section by linking to them, because we're using vue-router. We have to 
+        get user to / page, then manually scroll with javascript. I'll do this by turning the <a> tags into <router-link>'s, 
+        while running the emits so that the component can emit the event to its parent component and have that javascript scroll the
+        section into view (after the webpage has redirected to the root / page).
+
+        Alternatively, you can leave the <a> tags and let them go nowhere, and let the parent component javascript do the redirecting with 
+        window.location. 
+        
+        If using window.location, check window url first to make sure youre not unnecessarily refreshing the page. 
+        -->
         <li class="py-2 active:underline">
-          <a href="#" @click="this.toggleMenu()">Contact</a>
+          <a
+            href="#"
+            @click="
+              toggleMenu();
+              $emit('mobileNavigationTo', 'contact');
+            "
+            >Contact</a
+          >
         </li>
         <li class="py-2 active:underline">
-          <a href="#" @click="this.toggleMenu()">Projects</a>
+          <a
+            href="#"
+            @click="
+              toggleMenu();
+              $emit('mobileNavigationTo', 'projects');
+            "
+            >Projects</a
+          >
         </li>
         <li class="py-2 active:underline">
-          <a href="#" @click="this.toggleMenu()">Skillset</a>
+          <a
+            href="#"
+            @click="
+              toggleMenu();
+              $emit('mobileNavigationTo', 'skillset');
+            "
+            >Skillset</a
+          >
         </li>
         <li class="py-2 active:underline">
-          <a href="#" @click="this.toggleMenu()">Resume</a>
+          <a
+            href="#"
+            @click="
+              toggleMenu();
+              $emit('mobileNavigationTo', 'resume');
+            "
+            >Resume</a
+          >
         </li>
         <li class="py-2 active:underline">
-          <router-link to="/case-studies" @click="this.toggleMenu()"
+          <router-link to="/case-studies" @click="toggleMenu()"
             >Case Studies</router-link
           >
         </li>
@@ -89,7 +127,7 @@ export default {
           <i
             id="toggle_light_settings"
             class="mt-2 fas fa-swatchbook"
-            @click="toggleLightSettings()"
+            @click="this.toggleLightSettings()"
           ></i>
         </li>
       </ul>
