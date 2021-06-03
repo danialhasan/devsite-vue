@@ -8,6 +8,7 @@ export default {
     ContactButton,
     ResumeButton,
   },
+  emits: ["clicked"],
 };
 </script>
 
@@ -18,9 +19,9 @@ export default {
         <h2 class="font-bold text-4xl text-center my-12">Contact Me</h2>
         <div id="form_container" class="w-full h-auto">
           <form
-            id="contactForm"
+            id="mobile_footer"
             name="devsite-contact"
-            class="flex flex-col w-full h-full px-4 dark:text-black-2"
+            class="contactForm flex flex-col w-full h-full px-4 dark:text-black-2"
           >
             <input type="hidden" name="form-name" value="devsite-contact" />
 
@@ -32,7 +33,7 @@ export default {
             <input
               type="text"
               name="name"
-              id="name_input"
+              id="mobile_name_input"
               class="transition-all w-full h-12 rounded-lg pl-4 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
               placeholder="Abel Tesfaye"
               aria-required="false"
@@ -75,8 +76,6 @@ export default {
               >
                 Send
               </button>
-              <!-- TODO: Add ejs-flash or something to signal to the user that the message was successfully sent. -->
-              <!-- TODO: In the near future, replace the button form submit with an axios form submission, to prevent page redirect to /contactform. -->
             </div>
           </form>
         </div>
@@ -135,7 +134,7 @@ export default {
         </div>
       </div>
       <div class="w-full h-auto flex flex-col my-12">
-        <contact-button />
+        <contact-button @clicked="$emit('clicked')" />
         <resume-button />
       </div>
       <div class="w-full flex flex-col text-center pb-16">
@@ -209,7 +208,7 @@ export default {
           </div>
         </div>
         <div class="flex flex-row justify-center mt-8 w-full h-auto">
-          <contact-button />
+          <contact-button @clicked="$emit('clicked')" />
           <resume-button />
         </div>
       </div>
@@ -218,9 +217,9 @@ export default {
           <h2 class="font-bold text-4xl text-center mb-12">Contact Me</h2>
           <div id="form_container" class="w-full h-auto">
             <form
-              id="contactForm"
+              id="desktop_footer"
               name="devsite-contact"
-              class="flex flex-col w-full h-full dark:text-black-2"
+              class="contactForm flex flex-col w-full h-full dark:text-black-2"
             >
               <input type="hidden" name="form-name" value="devsite-contact" />
 
@@ -232,7 +231,7 @@ export default {
               <input
                 type="text"
                 name="name"
-                id="name_input"
+                id="desktop_name_input"
                 class="transition-all w-full h-12 rounded-lg pl-4 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
                 placeholder="Abel Tesfaye"
                 aria-required="false"
@@ -285,11 +284,11 @@ export default {
           <ul
             class="text-center w-full justify-between flex flex-row mt-4 xl:mt-8 font-semibold text-xl"
           >
-            <li>Contact</li>
-            <li>Projects</li>
-            <li>Skillset</li>
-            <li>Resume</li>
-            <li>Case Studies</li>
+            <li><a href="/">Contact</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Skillset</a></li>
+            <li><a href="/">Resume</a></li>
+            <li><a href="/">Case Studies</a></li>
           </ul>
         </div>
       </div>

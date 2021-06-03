@@ -54,6 +54,34 @@ export default defineComponent({
     ProjectCard,
     FooterComponent,
   },
+  methods: {
+    scrollToForm() {
+      // let rect = document.getElementById(contactFormClass).getBoundingClientRect();
+      // let rect = document
+      //   .getElementsByClassName(contactFormClass)[0]
+      //   .getBoundingClientRect();
+      // if (rect.top == 0) {
+      //   rect = document
+      //     .getElementsByClassName(contactFormClass)[1]
+      //     .getBoundingClientRect();
+      // }
+      // console.log(rect.top);
+      var footer = document.getElementsByTagName("footer")[0];
+      footer.scrollIntoView(true);
+      // highlight first input value of whichever form is currently active.
+      var windowWidth =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+      if (windowWidth <= 1023) { //1023 and not 1024, because of the way Tailwind's media query classes work. 
+        // focus mobile form
+        document.getElementById("mobile_name_input").focus();
+      } else {
+        // focus desktop form
+        document.getElementById("desktop_name_input").focus();
+      }
+    },
+  },
 });
 </script>
 
@@ -64,7 +92,7 @@ export default defineComponent({
       <h1 class="text-5xl">I'm Danial.</h1>
       <h2 class="text-2xl my-4 px-24">I'm a full stack web developer.</h2>
       <div class="w-full h-auto flex flex-col lg:flex-row justify-center mt-12">
-        <contact-button />
+        <contact-button @clicked="scrollToForm" />
         <resume-button />
       </div>
       <h4
@@ -138,6 +166,8 @@ export default defineComponent({
         </div>
       </div>
     </div>
-    <footer-component />
+    <footer-component @clicked="scrollToForm" />
+    <!-- The y value of the form for footer-component is different than the y value of the form for the top 
+    contact-button component. See if it makes a difference with window.scrollto, fix if so.  -->
   </div>
 </template>
