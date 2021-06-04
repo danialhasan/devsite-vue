@@ -8,12 +8,12 @@ export default {
     ContactButton,
     ResumeButton,
   },
-  emits: ["clicked"],
+  emits: ["clicked", "caseStudiesClicked", "mobileNavigationTo"],
 };
 </script>
 
 <template>
-  <footer class="w-full h-full mt-24">
+  <footer id="footer" class="w-full h-full mt-24">
     <div id="mobile_footer" class="lg:hidden">
       <div class="w-full h-auto">
         <h2 class="font-bold text-4xl text-center my-12">Contact Me</h2>
@@ -134,7 +134,7 @@ export default {
         </div>
       </div>
       <div class="w-full h-auto flex flex-col my-12">
-        <contact-button @clicked="$emit('clicked')" />
+        <contact-button @clicked="$emit('contactClicked')" />
         <resume-button />
       </div>
       <div class="w-full flex flex-col text-center pb-16">
@@ -145,8 +145,15 @@ export default {
           <li>Contact</li>
           <li>Projects</li>
           <li>Skillset</li>
-          <li>Resume</li>
-          <li>Case Studies</li>
+          <li @click="$emit('mobileNavigationTo', 'resume')">Resume</li>
+          <li>
+            <router-link
+              to="/case-studies"
+              @click="$emit('caseStudiesClicked')"
+            >
+              Case Studies
+            </router-link>
+          </li>
         </ul>
       </div>
     </div>

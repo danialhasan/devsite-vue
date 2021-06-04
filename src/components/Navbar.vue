@@ -80,7 +80,6 @@ export default {
         -->
         <li class="py-2 active:underline">
           <a
-            href="#"
             @click="
               toggleMenu();
               $emit('mobileNavigationTo', 'contact');
@@ -90,7 +89,6 @@ export default {
         </li>
         <li class="py-2 active:underline">
           <a
-            href="#"
             @click="
               toggleMenu();
               $emit('mobileNavigationTo', 'projects');
@@ -100,7 +98,6 @@ export default {
         </li>
         <li class="py-2 active:underline">
           <a
-            href="#"
             @click="
               toggleMenu();
               $emit('mobileNavigationTo', 'skillset');
@@ -110,7 +107,6 @@ export default {
         </li>
         <li class="py-2 active:underline">
           <a
-            href="#"
             @click="
               toggleMenu();
               $emit('mobileNavigationTo', 'resume');
