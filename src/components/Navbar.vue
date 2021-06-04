@@ -23,12 +23,33 @@ export default {
 };
 </script>
 <template>
+  <!-- NOTE: The function that is triggered when the parent of this component detects the
+'mobileNavigationTo' emit event is different depending on the parent component. It's different in Home.vue and CaseStudies.vue, for example.
+Because of this, the code that is run for those two parent components is different.  -->
   <nav
-    class="max-w-screen-2xl mx-auto w-full h-auto pt-12 xl:pt-0 flex justify-between px-5"
+    class="
+      max-w-screen-2xl
+      mx-auto
+      w-full
+      h-auto
+      pt-12
+      xl:pt-0
+      flex
+      justify-between
+      px-5
+    "
   >
     <div
       id="logo"
-      class="xl:hidden font-bold font-sans text-lg dark:text-white-1 xl:mt-12 flex flex-row align-middle"
+      class="
+        xl:hidden
+        font-bold font-sans
+        text-lg
+        dark:text-white-1
+        xl:mt-12
+        flex flex-row
+        align-middle
+      "
     >
       <img
         src="/assets/favicons/favicon-32x32.png"
@@ -52,7 +73,21 @@ export default {
     </div>
     <div
       id="mobile_menu"
-      class="text-soft-white mobile_menu hidden z-50 fixed backdrop-filter backdrop-blur-sm backdrop-brightness-50 top-0 left-0 w-full h-full bg-opacity-10 bg-black text-black-1 dark:text-white-1"
+      class="
+        text-soft-white
+        mobile_menu
+        hidden
+        z-50
+        fixed
+        backdrop-filter backdrop-blur-sm backdrop-brightness-50
+        top-0
+        left-0
+        w-full
+        h-full
+        bg-opacity-10 bg-black
+        text-black-1
+        dark:text-white-1
+      "
       @click="toggleMenu()"
     >
       <!-- style="backdrop-filter: blur(15px); adds background blur to element in Chrome, not Safari.
@@ -79,30 +114,24 @@ export default {
         If using window.location, check window url first to make sure youre not unnecessarily refreshing the page. 
         -->
         <li class="py-2 active:underline">
-          <a
-            @click="
-              toggleMenu();
-              $emit('mobileNavigationTo', 'contact');
-            "
-            >Contact</a
+          <router-link
+            @click="toggleMenu"
+            :to="{ name: 'Home', hash: '#footer' }"
+            >Contact</router-link
           >
         </li>
         <li class="py-2 active:underline">
-          <a
-            @click="
-              toggleMenu();
-              $emit('mobileNavigationTo', 'projects');
-            "
-            >Projects</a
+          <router-link
+            @click="toggleMenu"
+            :to="{ name: 'Home', hash: '#projects' }"
+            >Projects</router-link
           >
         </li>
         <li class="py-2 active:underline">
-          <a
-            @click="
-              toggleMenu();
-              $emit('mobileNavigationTo', 'skillset');
-            "
-            >Skillset</a
+          <router-link
+            @click="toggleMenu"
+            :to="{ name: 'Home', hash: '#skillset' }"
+            >Skillset</router-link
           >
         </li>
         <li class="py-2 active:underline">
@@ -115,7 +144,7 @@ export default {
           >
         </li>
         <li class="py-2 active:underline">
-          <router-link to="/case-studies" @click="toggleMenu()"
+          <router-link :to="{ name: 'CaseStudies' }" @click="toggleMenu()"
             >Case Studies</router-link
           >
         </li>
@@ -130,7 +159,16 @@ export default {
     </div>
     <div
       id="desktop_menu"
-      class="hidden xl:flex items-center px-12 w-full h-28 justify-between dark:text-white-1"
+      class="
+        hidden
+        xl:flex
+        items-center
+        px-12
+        w-full
+        h-28
+        justify-between
+        dark:text-white-1
+      "
     >
       <div class="font-bold font-sans text-lg flex flex-row align-middle">
         <img src="/assets/favicons/favicon-32x32.png" alt="Logo" />

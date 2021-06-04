@@ -13,7 +13,8 @@ export const routes = [{
     component: Home,
     meta: {
       title: 'Home'
-    }
+    },
+    name: "Home"
   },
   {
     path: '/about',
@@ -21,10 +22,12 @@ export const routes = [{
       title: 'About'
     },
     component: About,
+    name: "About"
   },
   {
     path: '/case-studies',
     component: CaseStudies,
+    name: "CaseStudies",
     children: [{
         path: "", // "" acts as the base route, not "/"
         component: CaseStudyCardContainer,
@@ -34,18 +37,22 @@ export const routes = [{
         component: CaseStudy,
         children: [{
             path: "",
-            component: CaseStudyCardContainer
+            component: CaseStudyCardContainer,
+            name: "CaseStudyCardContainer"
           },
           {
             path: "BenfordRoofingCaseStudy",
-            component: BenfordRoofingCaseStudy
+            component: BenfordRoofingCaseStudy,
+            name: "BenfordRoofingCaseStudy"
           }, {
             path: "CryptoAPICaseStudy",
-            component: CryptoAPICaseStudy
+            component: CryptoAPICaseStudy,
+            name: "CryptoAPICaseStudy"
           }
         ]
       }
-    ]
+    ],
+    name: "CaseStudies"
   },
   /**
    * I want to render the component that has the caseStudy param as a name,
