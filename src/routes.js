@@ -27,7 +27,6 @@ export const routes = [{
   {
     path: '/case-studies',
     component: CaseStudies,
-    name: "CaseStudies",
     children: [{
         path: "", // "" acts as the base route, not "/"
         component: CaseStudyCardContainer,

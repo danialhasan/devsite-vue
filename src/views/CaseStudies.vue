@@ -51,7 +51,7 @@ export default {
 };
 </script>
 <template>
-  <navbar @mobileNavigationTo="scrollToSection" />
+  <navbar />
   <h2 class="font-bold font-sans text-3xl text-center mt-16">Case Studies</h2>
   <!-- <div id="case_study_container" class="w-full h-full">
     <case-study-card

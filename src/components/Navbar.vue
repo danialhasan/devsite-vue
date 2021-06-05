@@ -18,8 +18,10 @@ export default {
       menuButton.parentElement.classList.toggle("-rotate-45");
       body.classList.toggle("overflow-hidden");
     },
+    openResume() {
+      window.open("/assets/dh-resume.pdf", "_blank");
+    },
   },
-  emits: ["mobileNavigationTo"],
 };
 </script>
 <template>
@@ -102,17 +104,6 @@ Because of this, the code that is run for those two parent components is differe
         @click="toggleMenu()"
         class="text-center font-semibold mb-12 text-4xl"
       >
-        <!--
-        the a href can't scroll down to the section by linking to them, because we're using vue-router. We have to 
-        get user to / page, then manually scroll with javascript. I'll do this by turning the <a> tags into <router-link>'s, 
-        while running the emits so that the component can emit the event to its parent component and have that javascript scroll the
-        section into view (after the webpage has redirected to the root / page).
-
-        Alternatively, you can leave the <a> tags and let them go nowhere, and let the parent component javascript do the redirecting with 
-        window.location. 
-        
-        If using window.location, check window url first to make sure youre not unnecessarily refreshing the page. 
-        -->
         <li class="py-2 active:underline">
           <router-link
             @click="toggleMenu"
@@ -138,13 +129,13 @@ Because of this, the code that is run for those two parent components is differe
           <a
             @click="
               toggleMenu();
-              $emit('mobileNavigationTo', 'resume');
+              openResume();
             "
             >Resume</a
           >
         </li>
         <li class="py-2 active:underline">
-          <router-link :to="{ name: 'CaseStudies' }" @click="toggleMenu()"
+          <router-link to="/case-studies" @click="toggleMenu()"
             >Case Studies</router-link
           >
         </li>
@@ -176,7 +167,7 @@ Because of this, the code that is run for those two parent components is differe
       </div>
       <div class="flex w-auto h-full">
         <ul class="inline-flex justify-around items-center text-lg font-bold">
-          <li
+          <!-- <li
             class="ml-14 hover:text-black dark:hover:text-white hover:underline"
           >
             <a href="#form_container" @click="autofocusForm()">Contact</a>
@@ -204,6 +195,36 @@ Because of this, the code that is run for those two parent components is differe
               id="toggle_light_settings"
               class="cursor-pointer ml-14 fas fa-swatchbook fa-lg"
               @click="toggleLightSettings()"
+            ></i>
+          </li> -->
+          <li class="ml-14 py-2 active:underline">
+            <router-link :to="{ name: 'Home', hash: '#footer' }"
+              >Contact</router-link
+            >
+          </li>
+          <li class="ml-14 py-2 active:underline">
+            <router-link :to="{ name: 'Home', hash: '#projects' }"
+              >Projects</router-link
+            >
+          </li>
+          <li class="ml-14 py-2 active:underline">
+            <router-link :to="{ name: 'Home', hash: '#skillset' }"
+              >Skillset</router-link
+            >
+          </li>
+          <li class="ml-14 py-2 active:underline">
+            <router-link :to="{ path: '' }" @click="openResume()"
+              >Resume</router-link
+            >
+          </li>
+          <li class="ml-14 py-2 active:underline">
+            <router-link to="/case-studies">Case Studies</router-link>
+          </li>
+          <li>
+            <i
+              id="toggle_light_settings"
+              class="ml-14 mt-2 fas fa-swatchbook"
+              @click="this.toggleLightSettings()"
             ></i>
           </li>
         </ul>
