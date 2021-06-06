@@ -8,7 +8,12 @@
       </div>
     </header> -->
     <main
-      class="bg-soft-white dark:bg-soft-black-background text-soft-black-background"
+      class="
+        bg-soft-white
+        dark:bg-soft-black-background
+        text-soft-black-background
+        dark:text-soft-white
+      "
     >
       <router-view />
     </main>

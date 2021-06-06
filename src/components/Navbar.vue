@@ -47,7 +47,7 @@ Because of this, the code that is run for those two parent components is differe
         xl:hidden
         font-bold font-sans
         text-lg
-        dark:text-white-1
+        dark:text-soft-white
         xl:mt-12
         flex flex-row
         align-middle
@@ -88,7 +88,7 @@ Because of this, the code that is run for those two parent components is differe
         h-full
         bg-opacity-10 bg-black
         text-black-1
-        dark:text-white-1
+        dark:text-soft-white
       "
       @click="toggleMenu()"
     >
@@ -143,23 +143,17 @@ Because of this, the code that is run for those two parent components is differe
           <i
             id="toggle_light_settings"
             class="mt-2 fas fa-swatchbook"
-            @click="this.toggleLightSettings()"
+            @click="
+              toggleDarkMode();
+              toggleMenu();
+            "
           ></i>
         </li>
       </ul>
     </div>
     <div
       id="desktop_menu"
-      class="
-        hidden
-        xl:flex
-        items-center
-        px-12
-        w-full
-        h-28
-        justify-between
-        dark:text-white-1
-      "
+      class="hidden xl:flex items-center px-12 w-full h-28 justify-between"
     >
       <div class="font-bold font-sans text-lg flex flex-row align-middle">
         <img src="/assets/favicons/favicon-32x32.png" alt="Logo" />
@@ -167,36 +161,6 @@ Because of this, the code that is run for those two parent components is differe
       </div>
       <div class="flex w-auto h-full">
         <ul class="inline-flex justify-around items-center text-lg font-bold">
-          <!-- <li
-            class="ml-14 hover:text-black dark:hover:text-white hover:underline"
-          >
-            <a href="#form_container" @click="autofocusForm()">Contact</a>
-          </li>
-          <li
-            class="ml-14 hover:text-black dark:hover:text-white hover:underline"
-          >
-            <a href="#projects_section" @click="toggleMenu()">Projects</a>
-          </li>
-          <li
-            class="ml-14 hover:text-black dark:hover:text-white hover:underline"
-          >
-            <a href="#skillset_section" @click="toggleMenu()">Skillset</a>
-          </li>
-          <li
-            class="ml-14 hover:text-black dark:hover:text-white hover:underline"
-          >
-            <a href="#projects_section" @click="toggleMenu()">Resume</a>
-          </li>
-          <li class="ml-14 py-2 active:underline">
-            <router-link to="/case-studies">Case Studies</router-link>
-          </li>
-          <li>
-            <i
-              id="toggle_light_settings"
-              class="cursor-pointer ml-14 fas fa-swatchbook fa-lg"
-              @click="toggleLightSettings()"
-            ></i>
-          </li> -->
           <li class="ml-14 py-2 active:underline">
             <router-link :to="{ name: 'Home', hash: '#footer' }"
               >Contact</router-link
@@ -213,7 +177,7 @@ Because of this, the code that is run for those two parent components is differe
             >
           </li>
           <li class="ml-14 py-2 active:underline">
-            <router-link :to="{ path: '' }" @click="openResume()"
+            <router-link :to="{ path: '' }" @click="openResume"
               >Resume</router-link
             >
           </li>
@@ -223,8 +187,8 @@ Because of this, the code that is run for those two parent components is differe
           <li>
             <i
               id="toggle_light_settings"
-              class="ml-14 mt-2 fas fa-swatchbook"
-              @click="this.toggleLightSettings()"
+              class="ml-14 mt-2 fas fa-lg fa-swatchbook hover:cursor-pointer"
+              @click="toggleDarkMode()"
             ></i>
           </li>
         </ul>

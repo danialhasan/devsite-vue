@@ -8,8 +8,11 @@
     crossorigin="anonymous" />
   <link rel="preload" href="/font/SF_Pro_Display/SF-Pro-Display-Regular.otf" as="font" type="font/otf"
     crossorigin="anonymous" />
-  <!-- <link rel="preload" href="/font/Inter-italic.var.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="/font/fonts.css" />
+  <link rel="preload" href="/assets/menu_dark.svg" as="image">
+  <link rel="preload" href="/assets/menu_light.svg" as="image">
+  <link rel="preload" href="/assets/download_light.svg" as="image">
+  <link rel="preload" href="/assets/download_dark.svg" as="image">
+  <link rel="preload" as="style" href="/font/fonts.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <base href="#" class="cursor-pointer">
@@ -60,7 +63,7 @@
 
 </head>
 
-<body>
+<body class="dark:bg-soft-black-background transition-all ">
   <form name="devsite-contact" action="" netlify hidden>
     <input type="hidden" name="form-name" value="devsite-contact" />
     <input type="text" name="name">

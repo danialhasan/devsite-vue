@@ -21,34 +21,61 @@ export default {
           <form
             id="mobile_footer"
             name="devsite-contact"
-            class="contactForm flex flex-col w-full h-full px-4 dark:text-black-2"
+            class="
+              contactForm
+              flex flex-col
+              w-full
+              h-full
+              px-4
+              dark:text-black-2
+            "
           >
             <input type="hidden" name="form-name" value="devsite-contact" />
 
             <label
               for="name"
-              class="uppercase font-sans font-bold pb-2 text-black-2 dark:text-white-1"
+              class="uppercase font-sans font-bold pb-2 text-black-2"
               >Name</label
             >
             <input
               type="text"
               name="name"
               id="mobile_name_input"
-              class="transition-all w-full h-12 rounded-lg pl-4 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
+              class="
+                transition-all
+                w-full
+                h-12
+                rounded-lg
+                pl-4
+                bg-gray-200
+                focus:outline-none
+                focus:ring-2 focus:ring-form-outline
+                focus:bg-white
+              "
               placeholder="Abel Tesfaye"
               aria-required="false"
             />
 
             <label
               for="email"
-              class="uppercase font-sans font-bold py-2 text-black-2 dark:text-white-1"
+              class="uppercase font-sans font-bold py-2 text-black-2"
               >Email</label
             >
             <input
               type="email"
               name="email"
               id="email_input"
-              class="transition-all w-full h-12 rounded-lg pl-4 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
+              class="
+                transition-all
+                w-full
+                h-12
+                rounded-lg
+                pl-4
+                bg-gray-200
+                focus:outline-none
+                focus:ring-2 focus:ring-form-outline
+                focus:bg-white
+              "
               placeholder="zuck@facebook.com"
               required
               aria-required="true"
@@ -56,14 +83,25 @@ export default {
 
             <label
               for="message"
-              class="uppercase font-sans font-bold py-2 text-black-2 dark:text-white-1"
+              class="uppercase font-sans font-bold py-2 text-black-2"
               >Message</label
             >
             <textarea
               type="text"
               name="message"
               id="message_input"
-              class="transition-all w-full h-36 rounded-lg pl-4 pt-3 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
+              class="
+                transition-all
+                w-full
+                h-36
+                rounded-lg
+                pl-4
+                pt-3
+                bg-gray-200
+                focus:outline-none
+                focus:ring-2 focus:ring-form-outline
+                focus:bg-white
+              "
               placeholder="Enter your message here..."
               required
               aria-required="true"
@@ -72,7 +110,19 @@ export default {
               <button
                 id="form_submit"
                 type="submit"
-                class="text-soft-white transition-all hover:-mt-1 hover:mb-1 float-right w-44 h-16 bg-accent-3 text-2xl active:bg-opacity-50 text-white-1 rounded-xl"
+                class="
+                  text-soft-white
+                  transition-all
+                  hover:-mt-1
+                  hover:mb-1
+                  float-right
+                  w-44
+                  h-16
+                  bg-accent-3
+                  text-2xl
+                  active:bg-opacity-50
+                  rounded-xl
+                "
               >
                 Send
               </button>
@@ -81,11 +131,16 @@ export default {
         </div>
       </div>
       <div class="w-full h-auto">
-        <div
-          class="flex flex-col w-full mt-24 h-auto text-black-2 dark:text-white-1"
-        >
+        <div class="flex flex-col w-full mt-24 h-auto text-black-2">
           <h3
-            class="mb-8 text-center font-bold font-sans text-xl lg:text-2xl lg:mb-4"
+            class="
+              mb-8
+              text-center
+              font-bold font-sans
+              text-xl
+              lg:text-2xl
+              lg:mb-4
+            "
           >
             Danial Hasan
           </h3>
@@ -163,11 +218,16 @@ export default {
     >
       <div id="footer_left" class="w-1/2 flex flex-col px-8">
         <div class="w-full h-auto">
-          <div
-            class="flex flex-col w-full h-auto text-black-2 dark:text-white-1"
-          >
+          <div class="flex flex-col w-full h-auto text-black-2">
             <h3
-              class="mb-8 text-center font-bold font-sans text-xl lg:text-2xl lg:mb-4"
+              class="
+                mb-8
+                text-center
+                font-bold font-sans
+                text-xl
+                lg:text-2xl
+                lg:mb-4
+              "
             >
               Danial Hasan
             </h3>
@@ -232,28 +292,48 @@ export default {
 
               <label
                 for="name"
-                class="uppercase font-sans font-bold pb-2 text-black-2 dark:text-white-1"
+                class="uppercase font-sans font-bold pb-2 text-black-2"
                 >Name</label
               >
               <input
                 type="text"
                 name="name"
                 id="desktop_name_input"
-                class="transition-all w-full h-12 rounded-lg pl-4 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
+                class="
+                  transition-all
+                  w-full
+                  h-12
+                  rounded-lg
+                  pl-4
+                  bg-gray-200
+                  focus:outline-none
+                  focus:ring-2 focus:ring-form-outline
+                  focus:bg-white
+                "
                 placeholder="Abel Tesfaye"
                 aria-required="false"
               />
 
               <label
                 for="email"
-                class="uppercase font-sans font-bold py-2 text-black-2 dark:text-white-1"
+                class="uppercase font-sans font-bold py-2 text-black-2"
                 >Email</label
               >
               <input
                 type="email"
                 name="email"
                 id="email_input"
-                class="transition-all w-full h-12 rounded-lg pl-4 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
+                class="
+                  transition-all
+                  w-full
+                  h-12
+                  rounded-lg
+                  pl-4
+                  bg-gray-200
+                  focus:outline-none
+                  focus:ring-2 focus:ring-form-outline
+                  focus:bg-white
+                "
                 placeholder="zuck@facebook.com"
                 required
                 aria-required="true"
@@ -261,14 +341,25 @@ export default {
 
               <label
                 for="message"
-                class="uppercase font-sans font-bold py-2 text-black-2 dark:text-white-1"
+                class="uppercase font-sans font-bold py-2 text-black-2"
                 >Message</label
               >
               <textarea
                 type="text"
                 name="message"
                 id="message_input"
-                class="transition-all w-full h-36 rounded-lg pl-4 pt-3 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-form-outline focus:bg-white"
+                class="
+                  transition-all
+                  w-full
+                  h-36
+                  rounded-lg
+                  pl-4
+                  pt-3
+                  bg-gray-200
+                  focus:outline-none
+                  focus:ring-2 focus:ring-form-outline
+                  focus:bg-white
+                "
                 placeholder="Enter your message here..."
                 required
                 aria-required="true"
@@ -277,7 +368,19 @@ export default {
                 <button
                   id="form_submit"
                   type="submit"
-                  class="text-soft-white transition-all hover:-mt-1 hover:mb-1 float-right w-44 h-16 bg-accent-3 text-2xl active:bg-opacity-50 text-white-1 rounded-xl"
+                  class="
+                    text-soft-white
+                    transition-all
+                    hover:-mt-1
+                    hover:mb-1
+                    float-right
+                    w-44
+                    h-16
+                    bg-accent-3
+                    text-2xl
+                    active:bg-opacity-50
+                    rounded-xl
+                  "
                 >
                   Send
                 </button>
@@ -289,7 +392,16 @@ export default {
         </div>
         <div class="w-full text-center pb-16">
           <ul
-            class="text-center w-full justify-between flex flex-row mt-4 xl:mt-8 font-semibold text-xl"
+            class="
+              text-center
+              w-full
+              justify-between
+              flex flex-row
+              mt-4
+              xl:mt-8
+              font-semibold
+              text-xl
+            "
           >
             <li><a href="/">Contact</a></li>
             <li><a href="/">Projects</a></li>

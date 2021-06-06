@@ -26,7 +26,14 @@ export default {
 };
 </script>
 <template>
-  <div class="border-2 border-soft-black-background flex flex-col lg:h-full">
+  <div
+    class="
+      border-2 border-soft-black-background
+      dark:border-soft-white
+      flex flex-col
+      lg:h-full
+    "
+  >
     <div class="w-full h-1/2 lg:h-auto lg:flex-grow">
       <img
         class="w-full h-full"
@@ -35,18 +42,47 @@ export default {
         srcset=""
       />
     </div>
-    <div class="w-full h-1/2 py-4 px-6 bg-white lg:h-auto">
+    <div
+      class="
+        w-full
+        h-1/2
+        py-4
+        px-6
+        bg-white
+        dark:bg-soft-black-foreground
+        lg:h-auto
+      "
+    >
       <p class="text-2xl font-bold">{{ this.title }}</p>
       <p class="text-md py-2">{{ this.description }}</p>
-      <div class="flex flex-row w-full h-auto pt-4">
+      <div class="flex flex-row w-full h-auto pt-4 pb-2">
         <button
-          class="uppercase bg-soft-black-foreground text-soft-white px-6 py-2 rounded-lg"
+          class="
+            uppercase
+            bg-soft-black-foreground
+            text-soft-white
+            dark:bg-soft-white
+            dark:text-soft-black-background
+            px-6
+            py-2
+            rounded-lg
+          "
         >
           More Info
         </button>
         <a target="_blank" :href="this.githubLink">
           <button
-            class="uppercase text-soft-black-foreground border-2 border-soft-black-background px-6 py-2 rounded-lg ml-6"
+            class="
+              uppercase
+              text-soft-black-foreground
+              border-2 border-soft-black-background
+              dark:text-soft-white
+              dark:border-soft-white
+              px-6
+              py-2
+              rounded-lg
+              ml-6
+            "
           >
             Github
           </button>

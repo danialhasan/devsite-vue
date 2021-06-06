@@ -138,7 +138,18 @@ export default defineComponent({
   <div>
     <banner />
     <navbar @mobileNavigationTo="scrollToSection" />
-    <div id="header" class="font-bold text-center w-full h-auto mt-32">
+    <div
+      id="header"
+      class="
+        text-soft-black-background
+        dark:text-soft-white
+        font-bold
+        text-center
+        w-full
+        h-auto
+        mt-32
+      "
+    >
       <h1 class="text-5xl">I'm Danial.</h1>
       <h2 class="text-2xl my-4 px-24">I'm a full stack web developer.</h2>
       <div class="w-full h-auto flex flex-col lg:flex-row justify-center mt-12">
@@ -146,7 +157,15 @@ export default defineComponent({
         <resume-button />
       </div>
       <h4
-        class="font-serif text-lg mt-12 flex flex-row justify-center items-center uppercase"
+        class="
+          font-serif
+          text-lg
+          mt-12
+          flex flex-row
+          justify-center
+          items-center
+          uppercase
+        "
       >
         Available
         <span class="w-4 h-4 rounded-full bg-neon-green ml-2"></span>
@@ -155,7 +174,21 @@ export default defineComponent({
     <div id="projects" class="w-full h-auto">
       <h2 class="font-bold text-4xl text-center my-12">Projects</h2>
       <div
-        class="w-full max-w-screen-md lg:max-w-screen-lg mx-auto h-auto px-4 md:px-16 flex flex-col lg:flex-row lg:flex-wrap lg:justify-evenly lg:items-stretch space-y-10 lg:space-y-0"
+        class="
+          w-full
+          max-w-screen-md
+          lg:max-w-screen-lg
+          mx-auto
+          h-auto
+          px-4
+          md:px-16
+          flex flex-col
+          lg:flex-row lg:flex-wrap
+          lg:justify-evenly
+          lg:items-stretch
+          space-y-10
+          lg:space-y-0
+        "
       >
         <div
           v-for="project in this.projects"
@@ -176,7 +209,19 @@ export default defineComponent({
       <!-- Need to redesign and redo this. This part is a temporary placeholder. -->
       <div class="w-full h-auto px-2">
         <div
-          class="flex flex-col md:flex-row md:justify-center md:pt-4 md:max-w-screen-sm md:mx-auto border-soft-black-background bg-white border-2"
+          class="
+            flex flex-col
+            md:flex-row
+            md:justify-center
+            md:pt-4
+            md:max-w-screen-sm
+            md:mx-auto
+            border-soft-black-background
+            bg-white
+            dark:border-soft-white
+            dark:bg-soft-black-foreground
+            border-2
+          "
         >
           <div class="w-full h-auto md:w-[230px] pt-8 md:p-0">
             <h3 class="text-2xl text-center font-bold">Front End</h3>
