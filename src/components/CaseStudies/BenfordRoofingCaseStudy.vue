@@ -6,7 +6,7 @@ export default {
 <template>
   <h1 class="text-center text-2xl mt-12 mb-6 font-bold">Benford Roofing</h1>
   <img src="/assets/benfordroofing.png" alt="" srcset="" />
-  <h4 class="text-center text-sm pt-2 text-gray-600">
+  <h4 class="text-center text-sm pt-2 text-gray-600 dark:text-gray-200">
     This is what the homepage looks like.
   </h4>
   <div class="w-full h-auto px-6 text-left pt-8">

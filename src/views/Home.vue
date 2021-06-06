@@ -33,7 +33,7 @@ export default defineComponent({
           description:
             "A web app built for a business with Vue, Node and MongoDB.",
           image: "/assets/cryptoaddresstracer.png",
-          github: "https://github.com/danialhasan/devsite-vue",
+          github: "https://github.com/danialhasan/crypto_address_tracer",
           caseStudy: "/case-studies/portfoliosite",
         },
         {

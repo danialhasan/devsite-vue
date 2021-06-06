@@ -8,6 +8,11 @@ export default {
     ContactButton,
     ResumeButton,
   },
+  methods: {
+    openResume() {
+      window.open("/assets/dh-resume.pdf", "_blank");
+    },
+  },
   emits: ["clicked", "caseStudiesClicked", "mobileNavigationTo"],
 };
 </script>
@@ -197,10 +202,26 @@ export default {
         <ul
           class="text-center flex flex-col space-y-2 mt-4 font-semibold text-xl"
         >
-          <li>Contact</li>
-          <li>Projects</li>
-          <li>Skillset</li>
-          <li @click="$emit('mobileNavigationTo', 'resume')">Resume</li>
+          <li>
+            <router-link :to="{ name: 'Home', hash: '#footer' }"
+              >Contact</router-link
+            >
+          </li>
+          <li>
+            <router-link :to="{ name: 'Home', hash: '#projects' }"
+              >Projects</router-link
+            >
+          </li>
+          <li>
+            <router-link :to="{ name: 'Home', hash: '#skillset' }"
+              >Skillset</router-link
+            >
+          </li>
+          <li @click="openResume()">
+            <router-link :to="{ path: '' }" @click="openResume()"
+              >Resume</router-link
+            >
+          </li>
           <li>
             <router-link
               to="/case-studies"
@@ -403,11 +424,34 @@ export default {
               text-xl
             "
           >
-            <li><a href="/">Contact</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Skillset</a></li>
-            <li><a href="/">Resume</a></li>
-            <li><a href="/">Case Studies</a></li>
+            <li>
+              <router-link :to="{ name: 'Home', hash: '#footer' }"
+                >Contact</router-link
+              >
+            </li>
+            <li>
+              <router-link :to="{ name: 'Home', hash: '#projects' }"
+                >Projects</router-link
+              >
+            </li>
+            <li>
+              <router-link :to="{ name: 'Home', hash: '#skillset' }"
+                >Skillset</router-link
+              >
+            </li>
+            <li @click="openResume()">
+              <router-link :to="{ path: '' }" @click="openResume()"
+                >Resume</router-link
+              >
+            </li>
+            <li>
+              <router-link
+                to="/case-studies"
+                @click="$emit('caseStudiesClicked')"
+              >
+                Case Studies
+              </router-link>
+            </li>
           </ul>
         </div>
       </div>

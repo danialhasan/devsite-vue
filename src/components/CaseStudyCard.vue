@@ -39,7 +39,15 @@ export default {
   Alter accordingly for desktop responsiveness. -->
     <router-link :to="routerLink">
       <div
-        class="w-auto lg:w-[360px] my-4 border-2 border-soft-black h-auto lg:flex lg:flex-col xl:mr-6"
+        class="
+          w-auto
+          lg:w-[360px]
+          my-4
+          border-2 border-soft-black
+          h-auto
+          lg:flex lg:flex-col
+          xl:mr-6
+        "
       >
         <!-- image -->
         <div class="w-full h-1/2 lg:h-[212px] overflow-hidden mx-auto">
@@ -51,9 +59,29 @@ export default {
           />
         </div>
         <!-- text -->
-        <div class="w-full h-1/2 lg:h-auto flex flex-col px-6 py-4 space-y-2">
+        <div
+          class="
+            bg-white
+            dark:bg-soft-black-foreground
+            w-full
+            h-1/2
+            lg:h-auto
+            flex flex-col
+            px-6
+            py-4
+            space-y-2
+          "
+        >
           <span
-            class="text-xs leading-loose text-soft-black-foreground opacity-80 font-bold"
+            class="
+              text-xs
+              leading-loose
+              text-soft-black-foreground
+              dark:text-soft-white
+              dark:opacity-95
+              opacity-80
+              font-bold
+            "
             >POSTED {{ date }}</span
           >
           <h3 class="font-bold text-base">
