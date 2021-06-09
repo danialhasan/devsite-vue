@@ -13,6 +13,14 @@ export default defineComponent({
     return {
       projects: [
         {
+          name: "Benford Roofing",
+          description:
+            "Static website designed to bring Benford Roofing more clients, in combination with Google ads. ",
+          image: "/assets/benfordroofing.png",
+          github: "https://github.com/danialhasan/roofing-company",
+          caseStudy: "/case-studies/roofingcompany",
+        },
+        {
           name: "Crypto API",
           description:
             "This web app uses the CoinMarketCap API to retrieve data regarding 4 cryptocurrencies.",
@@ -35,14 +43,6 @@ export default defineComponent({
           image: "/assets/cryptoaddresstracer.png",
           github: "https://github.com/danialhasan/crypto_address_tracer",
           caseStudy: "/case-studies/portfoliosite",
-        },
-        {
-          name: "Benford Roofing",
-          description:
-            "Static website designed to bring Benford Roofing more clients, in combination with Google ads. ",
-          image: "/assets/benfordroofing.png",
-          github: "https://github.com/danialhasan/roofing-company",
-          caseStudy: "/case-studies/roofingcompany",
         },
       ],
     };
