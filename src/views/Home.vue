@@ -19,6 +19,7 @@ export default defineComponent({
           image: "/assets/benfordroofing.png",
           github: "https://github.com/danialhasan/roofing-company",
           caseStudy: "/case-studies/roofingcompany",
+          link: "https://benfordroofing.com",
         },
         {
           name: "Crypto API",
@@ -27,6 +28,7 @@ export default defineComponent({
           image: "/assets/cryptoapi.png",
           github: "https://github.com/danialhasan/cryptoapi",
           caseStudy: "/case-studies/crypto-api",
+          link: "https://crypto-api-dh.herokuapp.com/",
         },
         {
           name: "Portfolio Site",
@@ -35,6 +37,7 @@ export default defineComponent({
           image: "/assets/portfoliosite.png",
           github: "https://github.com/danialhasan/devsite-vue",
           caseStudy: "/case-studies/portfoliosite",
+          link: "https://hasandev.ca",
         },
         {
           name: "Crypto Address Tracer",
@@ -43,6 +46,7 @@ export default defineComponent({
           image: "/assets/cryptoaddresstracer.png",
           github: "https://github.com/danialhasan/crypto_address_tracer",
           caseStudy: "/case-studies/portfoliosite",
+          link: "https://crypto-address-tracer.herokuapp.com/",
         },
       ],
     };
@@ -200,6 +204,7 @@ export default defineComponent({
             :title="project.name"
             :description="project.description"
             :githubLink="project.github"
+            :link="project.link"
           />
         </div>
       </div>

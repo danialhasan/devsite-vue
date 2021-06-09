@@ -21,8 +21,16 @@ export default {
       type: String,
       default: "/404",
     },
+    link: {
+      type: String,
+      default: "",
+    },
   },
-  methods: {},
+  methods: {
+    viewProject(link) {
+      window.open(link, "_blank");
+    },
+  },
 };
 </script>
 <template>
@@ -34,12 +42,16 @@ export default {
       lg:h-full
     "
   >
-    <div class="w-full h-1/2 lg:h-auto lg:flex-grow">
+    <div
+      class="w-full h-1/2 lg:h-auto lg:flex-grow hover:cursor-pointer"
+      @click="viewProject(this.link)"
+    >
       <img
         class="w-full h-full"
         :src="this.image"
         alt="Project card image"
         srcset=""
+        draggable="false"
       />
     </div>
     <div
