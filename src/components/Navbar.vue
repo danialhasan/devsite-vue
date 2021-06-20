@@ -134,11 +134,11 @@ Because of this, the code that is run for those two parent components is differe
             >Resume</a
           >
         </li>
-        <li class="py-2 active:underline">
+        <!-- <li class="py-2 active:underline">
           <router-link to="/case-studies" @click="toggleMenu()"
             >Case Studies</router-link
           >
-        </li>
+        </li> -->
         <li>
           <i
             id="toggle_light_settings"
@@ -181,9 +181,9 @@ Because of this, the code that is run for those two parent components is differe
               >Resume</router-link
             >
           </li>
-          <li class="ml-14 py-2 active:underline">
+          <!-- <li class="ml-14 py-2 active:underline">
             <router-link to="/case-studies">Case Studies</router-link>
-          </li>
+          </li> -->
           <li>
             <i
               id="toggle_light_settings"

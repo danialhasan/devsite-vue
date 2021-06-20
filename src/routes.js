@@ -24,6 +24,8 @@ export const routes = [{
     component: About,
     name: "About"
   },
+  /*
+  //NOTE do not uncomment until case studies part of site is finished
   {
     path: '/case-studies',
     component: CaseStudies,
@@ -53,6 +55,7 @@ export const routes = [{
     ],
     name: "CaseStudies"
   },
+  */
   /**
    * I want to render the component that has the caseStudy param as a name,
    * which is given its body prop info from CaseStudies.vue
