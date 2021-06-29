@@ -269,7 +269,7 @@ export default defineComponent({
     <footer-component
       @contactClicked="scrollToForm"
       @mobileNavigationTo="scrollToSection"
-      @caseStudiesClicked="scrollToTop"
+      @articlesClicked="scrollToTop"
     />
     <!-- The y value of the form for footer-component is different than the y value of the form for the top 
     contact-button component. See if it makes a difference with window.scrollto, fix if so.  -->

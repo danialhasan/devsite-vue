@@ -1,11 +1,11 @@
 <script>
 import Navbar from "@/components/Navbar.vue";
-import CaseStudyCard from "@/components/CaseStudyCard.vue";
+import ArticleCard from "@/components/ArticleCard.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 export default {
   components: {
     Navbar,
-    CaseStudyCard,
+    ArticleCard,
     FooterComponent,
   },
   methods: {
@@ -52,7 +52,7 @@ export default {
 </script>
 <template>
   <navbar />
-  <h2 class="font-bold font-sans text-3xl text-center mt-16">Case Studies</h2>
+  <h2 class="font-bold font-sans text-3xl text-center mt-16">Articles</h2>
   <!-- <div id="case_study_container" class="w-full h-full">
     <case-study-card
       v-for="casestudy in this.caseStudies"
