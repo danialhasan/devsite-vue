@@ -7,7 +7,14 @@ export default {
   methods: {
     toggleDarkMode() {
       const html = document.getElementsByTagName("html")[0];
-      html.classList.toggle("dark");
+
+      if (localStorage.theme === "light") {
+        html.classList.toggle("dark");
+        localStorage.theme = "dark";
+      } else {
+        html.classList.toggle("dark");
+        localStorage.theme = "light";
+      }
     },
     toggleMenu() {
       var mobileMenu = document.getElementById("mobile_menu");
@@ -22,6 +29,7 @@ export default {
       window.open("/assets/dh-resume.pdf", "_blank");
     },
   },
+  emits: [],
 };
 </script>
 <template>
@@ -63,7 +71,6 @@ Because of this, the code that is run for those two parent components is differe
         <a href="/">Danial Hasan</a>
       </p>
     </div>
-    <!-- ^ 'logo' -->
     <div class="xl:hidden transform transition-all z-50">
       <img
         id="menu_button"

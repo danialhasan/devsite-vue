@@ -16,6 +16,8 @@
   <link rel="preload" as="style" href="/font/fonts.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <base href="#" class="cursor-pointer">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -50,7 +52,7 @@
   <meta property="twitter:url" content="https://www.hasandev.ca/">
   <meta property="twitter:title" content="Danial Hasan - Portfolio">
   <meta property="twitter:description"
-    content="Danial Hasan is a full stack web developer who builds web applications with Node.js, styles them with TailwindCSS and makes them dynamic with Javascript. ">
+    content="I'm a full stack Javascript web developer, and I'm documenting my progress as a web developer. I've been a javascript web developer for 3 years. ">
   <meta property="twitter:image" content="./assets/socialmediaimage.jpg">
 
   <!-- Favicon -->
@@ -62,6 +64,22 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- Dark mode setup for localstorage -->
+  <script>
+    const html = document.getElementsByTagName('html')[0];
+
+    // add dark mode preference to localstorage if it doesnt exist
+    if (localStorage.theme === null) {
+      localStorage.theme =
+        'light';
+    }
+
+    if (localStorage.theme === 'dark') {
+      html.classList.add('dark')
+    } else {
+      html.classList.remove('dark')
+    }
+  </script>
 </head>
 
 <body class="dark:bg-soft-black-background transition-all ">

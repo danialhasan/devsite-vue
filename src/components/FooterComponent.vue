@@ -462,7 +462,7 @@ export default {
             </li>
             <li>
               <router-link
-                :to="{ name: 'Articles' }"
+                to="/articles"
                 @click="$emit('articlesClicked')"
               >
                 Articles

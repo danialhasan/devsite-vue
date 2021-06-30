@@ -29,6 +29,7 @@ export const routes = [{
   {
     path: '/articles',
     component: Articles,
+    name: "Articles",
     children: [{
         path: "", // "" acts as the base route, not "/"
         component: ArticleCardContainer,
@@ -54,7 +55,6 @@ export const routes = [{
       //   ]
       // }
     ],
-    name: "Articles"
   },
 
   {

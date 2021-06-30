@@ -52,7 +52,7 @@ export default {
 </script>
 <template>
   <navbar />
-  <h2 class="font-bold font-sans text-3xl text-center mt-16">Articles</h2>
+  <h2 class="font-bold font-sans text-3xl text-center my-16">Articles</h2>
   <!-- <div id="case_study_container" class="w-full h-full">
     <case-study-card
       v-for="casestudy in this.caseStudies"

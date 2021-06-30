@@ -5,6 +5,15 @@ export default {
       window.open(url, target);
     },
   },
+  computed: {
+    darkModeActive() {
+      if (localStorage.theme === "dark") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
 };
 </script>
 
@@ -28,13 +37,30 @@ export default {
       hover:-mt-1
     "
   >
-    <span class="w-5 h-5 mr-2">
-      <img
+    <span class="w-6 h-6 mr-2">
+      <!-- <img
         id="resume_download_icon_1"
-        src="/assets/download_light.svg"
+        :src="
+          darkModeActive
+            ? '/assets/download_light.svg'
+            : '/assets/download_dark.svg'
+        "
         alt="Download Resume icon"
         srcset=""
-      />
+      /> -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        :stroke="darkModeActive ? 'rgb(255,255,255)' : 'rgb(0,0,0)'"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+        />
+      </svg>
       <!--
       We need to change the resume download icon image depending on
       if dark mode is currently enabled. Since we're going to use
