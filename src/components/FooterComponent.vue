@@ -34,7 +34,7 @@ export default {
               px-4
               dark:text-black-2
             "
-            data-netlify="true"
+            netlify
             netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="devsite-contact" />
