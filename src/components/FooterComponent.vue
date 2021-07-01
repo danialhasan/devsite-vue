@@ -34,6 +34,8 @@ export default {
               px-4
               dark:text-black-2
             "
+            data-netlify="true"
+            netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="devsite-contact" />
 
@@ -461,10 +463,7 @@ export default {
               >
             </li>
             <li>
-              <router-link
-                to="/articles"
-                @click="$emit('articlesClicked')"
-              >
+              <router-link to="/articles" @click="$emit('articlesClicked')">
                 Articles
               </router-link>
             </li>
