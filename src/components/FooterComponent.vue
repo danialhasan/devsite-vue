@@ -329,6 +329,9 @@ export default {
               id="desktop_footer"
               name="devsite-contact"
               class="contactForm flex flex-col w-full h-full dark:text-black-2"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
             >
               <input type="hidden" name="form-name" value="devsite-contact" />
 
