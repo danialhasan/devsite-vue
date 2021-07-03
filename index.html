@@ -23,7 +23,6 @@
   <!-- Plausible Analytics -->
   <script defer data-domain="hasandev.ca" src="https://plausible.io/js/plausible.js"></script>
 
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Y6ML83GZ1"></script>
   <script>
@@ -73,7 +72,7 @@
     const html = document.getElementsByTagName('html')[0];
 
     // add dark mode preference to localstorage if it doesnt exist
-    if (localStorage.theme === null) {
+    if (localStorage.theme === null || localStorage.theme === undefined || localStorage.theme === "dark") {
       localStorage.theme =
         'light';
     }

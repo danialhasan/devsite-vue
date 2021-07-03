@@ -5,14 +5,25 @@ export default {
       window.open(url, target);
     },
   },
-  computed: {
-    darkModeActive() {
+  methods: {
+    changeResumeIcon() {
+      console.log("changeResumeIcon method run");
+
+      const icon = document.getElementById("resumeIcon");
+
+      /* listen for changes to windows' localstorage.
+       * onstorage event is dispatched on source page where localstorage change was made, but not detected on it.
+       * it's only detected on other pages, mainly to sync their stuff with localstorage when it changes.
+       */
       if (localStorage.theme === "dark") {
-        return true;
-      } else {
-        return false;
+        icon.setAttribute("stroke", "rgb(255,255,255)");
+      } else if (localStorage.theme === "light") {
+        icon.setAttribute("stroke", "rgb(0,0,0)");
       }
     },
+  },
+  mounted() {
+    window.onstorage = this.changeResumeIcon;
   },
 };
 </script>
@@ -52,7 +63,8 @@ export default {
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        :stroke="darkModeActive ? 'rgb(255,255,255)' : 'rgb(0,0,0)'"
+        id="resumeIcon"
+        stroke="rgb(0,0,0)"
       >
         <path
           stroke-linecap="round"

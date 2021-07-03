@@ -160,20 +160,23 @@ export default defineComponent({
         <contact-button @clicked="scrollToForm" />
         <resume-button />
       </div>
-      <h4
-        class="
-          font-serif
-          text-lg
-          mt-12
-          flex flex-row
-          justify-center
-          items-center
-          uppercase
-        "
-      >
-        Available
-        <span class="w-4 h-4 rounded-full bg-neon-green ml-2"></span>
-      </h4>
+      <div class="mt-12 flex flex-row justify-center items-center">
+        <h4 class="font-serif text-xl uppercase">Available</h4>
+        <span class="ml-3 flex flex-row h-3 w-3">
+          <span
+            class="
+              absolute
+              animate-ping
+              h-3
+              w-3
+              rounded-full
+              bg-green-400
+              opacity-75
+            "
+          ></span>
+          <span class="rounded-full h-3 w-3 bg-neon-green"></span>
+        </span>
+      </div>
     </div>
     <div id="projects" class="w-full h-auto">
       <h2 class="font-bold text-4xl text-center my-12">Projects</h2>

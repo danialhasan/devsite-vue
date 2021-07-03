@@ -11,25 +11,56 @@ export default {
       if (localStorage.theme === "light") {
         html.classList.toggle("dark");
         localStorage.theme = "dark";
+        this.changeMenuIcon(localStorage.theme);
+        window.dispatchEvent(new Event("storage"));
+        console.log(
+          "%cstorage event dispatched",
+          "padding:20px; background-color:cyan; color:black"
+        );
+
+        // this will cause a double window.storage event for other pages, but for just one page like our SPA
+        // it's fine.
       } else {
         html.classList.toggle("dark");
         localStorage.theme = "light";
+        this.changeMenuIcon(localStorage.theme);
+        window.dispatchEvent(new Event("storage"));
+        console.log(
+          "%cstorage event dispatched",
+          "padding:20px; background-color:cyan; color:black"
+        );
+        // see above comment.
       }
     },
     toggleMenu() {
-      var mobileMenu = document.getElementById("mobile_menu");
-      var menuButton = document.getElementById("menu_button");
+      const mobileMenu = document.getElementById("mobile_menu");
+      const menuButton = document.getElementById("menu_button");
       const body = document.getElementsByTagName("body")[0];
 
       mobileMenu.classList.toggle("hidden");
       menuButton.parentElement.classList.toggle("-rotate-45");
       body.classList.toggle("overflow-hidden");
     },
+    changeMenuIcon(theme) {
+      console.log("changeMenuIcon method run");
+      const menuButton = document.getElementById("menu_button");
+
+      if (theme === "dark") {
+        menuButton.setAttribute("src", "/assets/menu_light.svg");
+        console.log("set attribute to light!");
+      } else if (theme === "light") {
+        menuButton.setAttribute("src", "/assets/menu_dark.svg");
+        console.log("set attribute to dark!");
+      }
+    },
     openResume() {
       window.open("/assets/dh-resume.pdf", "_blank");
     },
   },
-  emits: [],
+  mounted() {
+    console.log(window);
+    // window.onstorage = this.changeMenuIcon;
+  },
 };
 </script>
 <template>
