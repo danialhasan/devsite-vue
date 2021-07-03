@@ -17,9 +17,7 @@ export default {
           "%cstorage event dispatched",
           "padding:20px; background-color:cyan; color:black"
         );
-
-        // this will cause a double window.storage event for other pages, but for just one page like our SPA
-        // it's fine.
+        // this will cause a double window.storage event for other pages, but it's fine for just one page like our SPA
       } else {
         html.classList.toggle("dark");
         localStorage.theme = "light";

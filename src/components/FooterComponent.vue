@@ -26,14 +26,7 @@ export default {
           <form
             id="mobile_footer"
             name="devsite-contact"
-            class="
-              contactForm
-              flex flex-col
-              w-full
-              h-full
-              px-4
-              dark:text-black-2
-            "
+            class="contactForm flex flex-col w-full h-full px-4"
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
@@ -42,7 +35,13 @@ export default {
 
             <label
               for="name"
-              class="uppercase font-sans font-bold pb-2 text-black-2"
+              class="
+                uppercase
+                font-sans font-bold
+                pb-2
+                text-gray-800
+                dark:text-gray-50
+              "
               >Name</label
             >
             <input
@@ -50,6 +49,7 @@ export default {
               name="name"
               id="mobile_name_input"
               class="
+                text-gray-800
                 transition-all
                 w-full
                 h-12
@@ -66,7 +66,13 @@ export default {
 
             <label
               for="email"
-              class="uppercase font-sans font-bold py-2 text-black-2"
+              class="
+                uppercase
+                font-sans font-bold
+                py-2
+                text-gray-800
+                dark:text-gray-50
+              "
               >Email</label
             >
             <input
@@ -74,7 +80,7 @@ export default {
               name="email"
               id="email_input"
               class="
-                transition-all
+                text-gray-800
                 w-full
                 h-12
                 rounded-lg
@@ -91,7 +97,13 @@ export default {
 
             <label
               for="message"
-              class="uppercase font-sans font-bold py-2 text-black-2"
+              class="
+                uppercase
+                font-sans font-bold
+                py-2
+                text-gray-800
+                dark:text-gray-50
+              "
               >Message</label
             >
             <textarea
@@ -99,6 +111,7 @@ export default {
               name="message"
               id="message_input"
               class="
+                text-gray-800
                 transition-all
                 w-full
                 h-36
@@ -139,7 +152,7 @@ export default {
         </div>
       </div>
       <div class="w-full h-auto">
-        <div class="flex flex-col w-full mt-24 h-auto text-black-2">
+        <div class="flex flex-col w-full mt-24 h-auto text-gray-800">
           <h3
             class="
               mb-8
@@ -242,7 +255,7 @@ export default {
     >
       <div id="footer_left" class="w-1/2 flex flex-col px-8">
         <div class="w-full h-auto">
-          <div class="flex flex-col w-full h-auto text-black-2">
+          <div class="flex flex-col w-full h-auto text-gray-800">
             <h3
               class="
                 mb-8
@@ -328,7 +341,7 @@ export default {
             <form
               id="desktop_footer"
               name="devsite-contact"
-              class="contactForm flex flex-col w-full h-full dark:text-black-2"
+              class="contactForm flex flex-col w-full h-full dark:text-gray-800"
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
@@ -337,7 +350,7 @@ export default {
 
               <label
                 for="name"
-                class="uppercase font-sans font-bold pb-2 text-black-2"
+                class="uppercase font-sans font-bold pb-2 text-gray-800"
                 >Name</label
               >
               <input
@@ -345,6 +358,7 @@ export default {
                 name="name"
                 id="desktop_name_input"
                 class="
+                  dark:text-gray-800
                   transition-all
                   w-full
                   h-12
@@ -361,7 +375,7 @@ export default {
 
               <label
                 for="email"
-                class="uppercase font-sans font-bold py-2 text-black-2"
+                class="uppercase font-sans font-bold py-2 text-gray-800"
                 >Email</label
               >
               <input
@@ -369,6 +383,7 @@ export default {
                 name="email"
                 id="email_input"
                 class="
+                  dark:text-gray-800
                   transition-all
                   w-full
                   h-12
@@ -386,7 +401,7 @@ export default {
 
               <label
                 for="message"
-                class="uppercase font-sans font-bold py-2 text-black-2"
+                class="uppercase font-sans font-bold py-2 text-gray-800"
                 >Message</label
               >
               <textarea
@@ -394,6 +409,7 @@ export default {
                 name="message"
                 id="message_input"
                 class="
+                  dark:text-gray-800
                   transition-all
                   w-full
                   h-36
