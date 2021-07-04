@@ -3,9 +3,8 @@ export default {
   methods: {
     navigate(url, target) {
       window.open(url, target);
+      console.log("navigate method called");
     },
-  },
-  methods: {
     changeResumeIcon() {
       console.log("changeResumeIcon method run");
 

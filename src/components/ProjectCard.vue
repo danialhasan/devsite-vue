@@ -30,6 +30,9 @@ export default {
     viewProject(link) {
       window.open(link, "_blank");
     },
+    goToCaseStudy(caseStudy) {
+      window.open(caseStudy, "_blank");
+    },
   },
 };
 </script>
@@ -69,6 +72,7 @@ export default {
       <p class="text-md py-2">{{ this.description }}</p>
       <div class="flex flex-row w-full h-auto pt-4 pb-2">
         <button
+          @click="goToCaseStudy(this.caseStudy)"
           class="
             uppercase
             bg-soft-black-foreground

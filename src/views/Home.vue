@@ -13,39 +13,40 @@ export default defineComponent({
     return {
       projects: [
         {
-          name: "Benford Roofing",
+          title: "Benford Roofing",
           description:
             "Static website designed to bring Benford Roofing more clients, in combination with Google ads. ",
           image: "/assets/benfordroofing.png",
-          github: "https://github.com/danialhasan/roofing-company",
+          githubLink: "https://github.com/danialhasan/roofing-company",
           caseStudy: "/case-studies/roofingcompany",
           link: "https://benfordroofing.com",
         },
         {
-          name: "Crypto API",
+          title: "Crypto API",
           description:
             "This web app uses the CoinMarketCap API to retrieve data regarding 4 cryptocurrencies.",
           image: "/assets/cryptoapi.png",
-          github: "https://github.com/danialhasan/cryptoapi",
+          githubLink: "https://github.com/danialhasan/cryptoapi",
           caseStudy: "/case-studies/crypto-api",
           link: "https://crypto-api-dh.herokuapp.com/",
         },
         {
-          name: "Portfolio Site",
+          title: "Portfolio Site",
           description:
             "This website (the one you're currently on) displays my portfolio of projects.",
           image: "/assets/portfoliosite.png",
-          github: "https://github.com/danialhasan/devsite-vue",
+          githubLink: "https://github.com/danialhasan/devsite-vue",
           caseStudy: "/case-studies/portfoliosite",
           link: "https://hasandev.ca",
         },
         {
-          name: "Crypto Address Tracer",
+          title: "Crypto Address Tracer",
           description:
             "A web app built for a business with Vue, Node and MongoDB.",
           image: "/assets/cryptoaddresstracer.png",
-          github: "https://github.com/danialhasan/crypto_address_tracer",
-          caseStudy: "/case-studies/portfoliosite",
+          githubLink: "https://github.com/danialhasan/crypto_address_tracer",
+          caseStudy:
+            "https://www.notion.so/Crypto-Address-Tracer-b261e0660926406e93d1da435a8002f5",
           link: "https://crypto-address-tracer.herokuapp.com/",
         },
       ],
@@ -202,13 +203,7 @@ export default defineComponent({
           :key="project"
           class="lg:max-w-[440px] lg:h-auto lg:p-4"
         >
-          <project-card
-            :image="project.image"
-            :title="project.name"
-            :description="project.description"
-            :githubLink="project.github"
-            :link="project.link"
-          />
+          <project-card v-bind="project" />
         </div>
       </div>
     </div>
