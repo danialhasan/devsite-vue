@@ -77,7 +77,6 @@ export default defineComponent({
         });
       }, 50);
 
-      console.log(footer.offsetTop);
       var windowWidth =
         window.innerWidth ||
         document.documentElement.clientWidth ||
@@ -86,11 +85,9 @@ export default defineComponent({
         //1023 and not 1024, because of the way Tailwind's media query classes work.
         // focus mobile form
         document.getElementById("mobile_name_input").focus();
-        console.log("focused mobile form");
       } else {
         // focus desktop form
         document.getElementById("desktop_name_input").focus();
-        console.log("focused desktop form");
       }
     }, //refactor later, add polyfill
     scrollToSection(section) {
