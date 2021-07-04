@@ -528,7 +528,13 @@ export default {
 
               <label
                 for="name"
-                class="uppercase font-sans font-bold pb-2 text-gray-800"
+                class="
+                  uppercase
+                  font-sans font-bold
+                  pb-2
+                  text-gray-800
+                  dark:text-gray-50
+                "
                 >Name</label
               >
               <input
@@ -553,7 +559,13 @@ export default {
 
               <label
                 for="email"
-                class="uppercase font-sans font-bold py-2 text-gray-800"
+                class="
+                  uppercase
+                  font-sans font-bold
+                  py-2
+                  text-gray-800
+                  dark:text-gray-50
+                "
                 >Email</label
               >
               <input
@@ -579,7 +591,13 @@ export default {
 
               <label
                 for="message"
-                class="uppercase font-sans font-bold py-2 text-gray-800"
+                class="
+                  uppercase
+                  font-sans font-bold
+                  py-2
+                  text-gray-800
+                  dark:text-gray-50
+                "
                 >Message</label
               >
               <textarea
