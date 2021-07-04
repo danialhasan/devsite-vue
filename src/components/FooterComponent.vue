@@ -204,7 +204,7 @@ export default {
           </p>
           <p>
             Currently, I stay updated on web trends while pursuing topics like
-            blockchain programming and DeFi. Currently available for hire.
+            blockchain programming and DeFi.
           </p>
           <p class="text-red-500">Currently available for hire.</p>
         </div>
