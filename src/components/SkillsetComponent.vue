@@ -26,15 +26,29 @@ export default {
 };
 </script>
 <template>
-  <div>
-    <div class="border-2 border-black flex flex-col">
-      <div class="flex flex-row">
-        <div class="w-[54px] h-[54px] border border-black object-cover flex">
-          <img :src="this.image" alt="" srcset="" />
+  <div
+    class="
+      md:max-w-[350px]
+      lg:max-w-[420px]
+      w-full
+      md:justify-self-center
+      md:self-center
+      border-2 border-black
+      bg-white
+      shadow-lg
+      rounded-2xl
+      md:h-full
+    "
+  >
+    <div class="flex flex-col p-7">
+      <div class="flex flex-row justify-between">
+        <div class="w-[54px] h-[54px] object-cover flex">
+          <img :src="this.image" alt="Logo of specified skillset" srcset="" />
         </div>
-        <p class="border border-red-300">{{ this.experience }}</p>
+
+        <p>{{ this.experience }}+ years of experience</p>
       </div>
-      <h3 class="font-semibold text-2xl">{{ this.title }}</h3>
+      <h3 class="font-semibold text-2xl py-4">{{ this.title }}</h3>
       <p>{{ this.description }}</p>
     </div>
   </div>

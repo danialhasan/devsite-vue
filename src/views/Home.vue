@@ -56,7 +56,7 @@ export default defineComponent({
           {
             title: "Vue.js",
             description:
-              "Component scaffolding, modularity, and web interfaces.",
+              "Component scaffolding, modularity, and web interfaces. I use Vue 3 for most of my front-end projects.",
             image: "/assets/skillset_logos/vue_logo.svg",
             experience: 3,
           },
@@ -70,7 +70,7 @@ export default defineComponent({
           {
             title: "Javascript",
             description:
-              "My bread and butter. I use Javascript to add magic to webpages!",
+              "My bread and butter for building web apps. I can do everything in Javascript.",
             image: "/assets/skillset_logos/javascript_logo.svg",
             experience: 4,
           },
@@ -260,30 +260,87 @@ export default defineComponent({
     </div>
     <div id="skillset" class="w-full h-auto my-44">
       <h2 class="font-bold text-4xl text-center my-12">Skillset</h2>
-      <div class="w-full max-w-screen-xl mx-auto h-auto px-2">
+      <div class="w-full max-w-screen-lg mx-auto h-auto px-8">
         <div
-          class="text-gray-800 dark:text-gray-50 text-center w-full px-8 my-4"
+          class="
+            text-gray-800
+            dark:text-gray-50
+            text-center
+            md:text-left
+            w-full
+            px-2
+            my-8
+            md:mt-12
+            md:mb-10
+            md:pl-[22px]
+          "
         >
-          <h1 class="font-bold text-2xl">Frontend Web Development</h1>
-          <p class="text-lg font-regular">
+          <h1 class="font-bold text-2xl md:text-5xl">
+            Frontend Web Development
+          </h1>
+          <p class="text-lg font-regular mt-3 md:text-2xl">
             I build web interfaces with Vue &amp; TailwindCSS. Beyond that, I
             use HTML/CSS and Javascript.
           </p>
         </div>
-        <skillset-component
-          v-for="skill in skills.frontend"
-          :key="skill.title"
-          v-bind="skill"
-        />
-        <!-- <div
-          class="text-gray-800 dark:text-gray-50 text-center w-full px-8 my-4"
+        <div
+          id="skillset_container_frontend"
+          class="
+            flex flex-col
+            space-y-4
+            md:space-y-0
+            md:grid md:grid-cols-2 md:grid-rows-2
+            md:gap-4
+            lg:gap-8
+          "
         >
-          <h1 class="font-bold text-2xl">Backend Web Development</h1>
-          <p class="text-lg font-regular">
+          <skillset-component
+            v-for="skill in skills.frontend"
+            :key="skill.title"
+            v-bind="skill"
+          />
+        </div>
+
+        <div
+          class="
+            text-gray-800
+            dark:text-gray-50
+            text-center
+            md:text-left
+            w-full
+            px-2
+            my-8
+            md:mt-12
+            md:mb-10
+            md:pl-[22px]
+            xl:mt-24
+          "
+        >
+          <h1 class="font-bold text-2xl md:text-5xl">
+            Backend Web Development
+          </h1>
+          <p class="text-lg font-regular mt-3 md:text-2xl">
             Setting up web servers, APIs, and other general backend
             infrastructure.
           </p>
-        </div> -->
+        </div>
+        <div
+          id="skillset_container_backend"
+          class="
+            flex flex-col
+            space-y-4
+            md:space-y-0
+            md:grid md:grid-cols-2 md:grid-rows-2
+            md:gap-4
+            lg:gap-8
+          "
+        >
+          <skillset-component
+            v-for="skill in skills.backend"
+            :key="skill.title"
+            v-bind="skill"
+          />
+        </div>
       </div>
     </div>
     <footer-component
