@@ -35,6 +35,8 @@ export default {
       md:self-center
       border-2 border-black
       bg-white
+      dark:border-white
+      dark:bg-soft-black-foreground
       shadow-lg
       rounded-2xl
       md:h-full
