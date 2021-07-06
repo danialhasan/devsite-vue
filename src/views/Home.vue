@@ -7,6 +7,7 @@ import ResumeButton from "@/components/ResumeButton.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import Banner from "@/components/Banner.vue";
+import SkillsetComponent from "@/components/SkillsetComponent.vue";
 
 export default defineComponent({
   data() {
@@ -50,6 +51,61 @@ export default defineComponent({
           link: "https://crypto-address-tracer.herokuapp.com/",
         },
       ],
+      skills: {
+        frontend: [
+          {
+            title: "Vue.js",
+            description:
+              "Component scaffolding, modularity, and web interfaces.",
+            image: "/assets/skillset_logos/vue_logo.svg",
+            experience: 3,
+          },
+          {
+            title: "TailwindCSS",
+            description:
+              "My favourite CSS framework. I’ve designed most of my modern web projects in TailwindCSS.",
+            image: "/assets/skillset_logos/tailwindcss_logo.svg",
+            experience: 2,
+          },
+          {
+            title: "Javascript",
+            description:
+              "My bread and butter. I use Javascript to add magic to webpages!",
+            image: "/assets/skillset_logos/javascript_logo.svg",
+            experience: 4,
+          },
+          {
+            title: "HTML/CSS",
+            description:
+              "Semantic HTML, SEO, plain and powerful CSS. This is what I started with.",
+            image: "/assets/skillset_logos/html_logo.svg",
+            experience: 5,
+          },
+        ],
+        backend: [
+          {
+            title: "Node.js",
+            description:
+              "The runtime environment I build my backend in. I use javascript for the backend and frontend.",
+            image: "/assets/skillset_logos/nodejs_logo.svg",
+            experience: 2,
+          },
+          {
+            title: "Express.js",
+            description:
+              "My favourite backend/API framework for Node. I use this to build APIs and handle HTTP requests.",
+            image: "/assets/skillset_logos/express_logo.svg",
+            experience: 2,
+          },
+          {
+            title: "MongoDB",
+            description:
+              "My preferred database of choice. I use Mongoose to speed up MongoDB interactions.",
+            image: "/assets/skillset_logos/mongodb_logo.svg",
+            experience: 2,
+          },
+        ],
+      },
     };
   },
   components: {
@@ -60,6 +116,7 @@ export default defineComponent({
     ProjectCard,
     FooterComponent,
     Banner,
+    SkillsetComponent,
   },
   methods: {
     scrollToForm() {
@@ -102,15 +159,12 @@ export default defineComponent({
           break;
         case "projects":
           console.log(window.location.href); //doesn't activate in /case-studies for some reason
-          console.log("test");
           window.scrollTo({
             top: projects.offsetTop,
             behavior: "smooth",
           });
           break;
         case "skillset":
-          console.log("test");
-
           window.scrollTo({
             top: skillset.offsetTop,
             behavior: "smooth",
@@ -206,59 +260,30 @@ export default defineComponent({
     </div>
     <div id="skillset" class="w-full h-auto my-44">
       <h2 class="font-bold text-4xl text-center my-12">Skillset</h2>
-      <!-- Need to redesign and redo this. This part is a temporary placeholder. -->
-      <div class="w-full h-auto px-2">
+      <div class="w-full max-w-screen-xl mx-auto h-auto px-2">
         <div
-          class="
-            flex flex-col
-            md:flex-row
-            md:justify-center
-            md:pt-4
-            md:max-w-screen-sm
-            md:mx-auto
-            border-soft-black-background
-            bg-white
-            dark:border-soft-white
-            dark:bg-soft-black-foreground
-            border-2
-          "
+          class="text-gray-800 dark:text-gray-50 text-center w-full px-8 my-4"
         >
-          <div class="w-full h-auto md:w-[230px] pt-8 md:p-0">
-            <h3 class="text-2xl text-center font-bold">Front End</h3>
-            <ul class="pl-8 pt-3 list-inside list-disc">
-              <li>Javascript</li>
-              <li>
-                CSS
-                <ul class="list-inside list-disc ml-4">
-                  <li>TailwindCSS</li>
-                </ul>
-              </li>
-              <li>HTML</li>
-            </ul>
-          </div>
-          <div class="w-full h-auto md:w-[230px] pt-6 md:p-0">
-            <h3 class="text-2xl text-center font-bold">Back End</h3>
-            <ul class="pb-8 pl-8 pt-3 list-inside list-disc space-y-5">
-              <li>
-                Javascript
-                <ul class="list-inside list-disc ml-4">
-                  <li>NodeJS</li>
-                  <li>ExpressJS</li>
-                  <li>VueJS</li>
-                </ul>
-              </li>
-              <li>
-                API Integration
-                <ul class="list-inside list-disc ml-4">
-                  <li>CoinMarketCap</li>
-                  <li>Stripe</li>
-                  <li>Ethplorer</li>
-                </ul>
-              </li>
-              <li>MongoDB Integration</li>
-            </ul>
-          </div>
+          <h1 class="font-bold text-2xl">Frontend Web Development</h1>
+          <p class="text-lg font-regular">
+            I build web interfaces with Vue &amp; TailwindCSS. Beyond that, I
+            use HTML/CSS and Javascript.
+          </p>
         </div>
+        <skillset-component
+          v-for="skill in skills.frontend"
+          :key="skill.title"
+          v-bind="skill"
+        />
+        <!-- <div
+          class="text-gray-800 dark:text-gray-50 text-center w-full px-8 my-4"
+        >
+          <h1 class="font-bold text-2xl">Backend Web Development</h1>
+          <p class="text-lg font-regular">
+            Setting up web servers, APIs, and other general backend
+            infrastructure.
+          </p>
+        </div> -->
       </div>
     </div>
     <footer-component
