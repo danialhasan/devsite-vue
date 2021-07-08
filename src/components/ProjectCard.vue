@@ -1,5 +1,10 @@
 <script>
 export default {
+  data() {
+    return {
+      tooltipHovered: false,
+    };
+  },
   props: {
     image: {
       type: String,
@@ -88,7 +93,6 @@ export default {
           "
           >REWRITING</span
         >
-        <!-- make tooltip pop up from top once hovered -->
       </p>
       <p class="text-md py-2">{{ this.description }}</p>
       <div class="flex flex-row w-full h-auto pt-4 pb-2">
