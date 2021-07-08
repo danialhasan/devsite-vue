@@ -2,10 +2,7 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import NotFound from './views/NotFound.vue'
 import Articles from './views/Articles.vue'
-// import Article from "./components/CaseStudy.vue"
 import ArticleCardContainer from "./components/ArticleCardContainer.vue"
-// import BenfordRoofingCaseStudy from "./components/CaseStudies/BenfordRoofingCaseStudy.vue"
-// import CryptoAPICaseStudy from "./components/CaseStudies/CryptoAPICaseStudy.vue"
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [{
@@ -25,36 +22,15 @@ export const routes = [{
     name: "About"
   },
 
-  //NOTE do not uncomment until case studies part of site is finished
   {
     path: '/articles',
     component: Articles,
     name: "Articles",
     children: [{
-        path: "", // "" acts as the base route, not "/"
-        component: ArticleCardContainer,
-        name: "ArticleCardContainer"
-      },
-      // {
-      //   path: "casestudy",
-      //   component: Article,
-      //   children: [{
-      //       path: "",
-      //       component: ArticleCardContainer,
-      //       name: "ArticleCardContainer"
-      //     },
-      //     // {
-      //     //   path: "BenfordRoofingCaseStudy",
-      //     //   component: BenfordRoofingCaseStudy,
-      //     //   name: "BenfordRoofingCaseStudy"
-      //     // }, {
-      //     //   path: "CryptoAPICaseStudy",
-      //     //   component: CryptoAPICaseStudy,
-      //     //   name: "CryptoAPICaseStudy"
-      //     // }
-      //   ]
-      // }
-    ],
+      path: "", // "" acts as the base route, not "/"
+      component: ArticleCardContainer,
+      name: "ArticleCardContainer"
+    }, ],
   },
 
   {
