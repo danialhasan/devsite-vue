@@ -6,18 +6,22 @@ export default {
       console.log("navigate method called");
     },
     changeResumeIcon() {
-      console.log("changeResumeIcon method run");
-
-      const icon = document.getElementById("resumeIcon");
-
+      const icons = document.getElementsByClassName("resumeIcon");
       /* listen for changes to windows' localstorage.
        * onstorage event is dispatched on source page where localstorage change was made, but not detected on it.
        * it's only detected on other pages, mainly to sync their stuff with localstorage when it changes.
        */
+
       if (localStorage.theme === "dark") {
-        icon.setAttribute("stroke", "rgb(255,255,255)");
+        for (let i = 0; i < icons.length; i++) {
+          let icon = icons[i];
+          icon.setAttribute("stroke", "rgb(255,255,255)");
+        }
       } else if (localStorage.theme === "light") {
-        icon.setAttribute("stroke", "rgb(0,0,0)");
+        for (let i = 0; i < icons.length; i++) {
+          let icon = icons[i];
+          icon.setAttribute("stroke", "rgb(0,0,0)");
+        }
       }
     },
   },
@@ -62,7 +66,7 @@ export default {
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        id="resumeIcon"
+        class="resumeIcon"
         stroke="rgb(0,0,0)"
       >
         <path

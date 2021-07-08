@@ -82,7 +82,11 @@ export default {
       md:px-0
     "
   >
-    <span v-if="loading" id="loading_icon" class="flex flex-col">
+    <span
+      v-if="loading"
+      id="loading_icon"
+      class="w-full flex flex-col items-center col-span-3"
+    >
       <svg
         class="animate-spin -ml-1 mr-3 mt-24 mb-8 h-16 w-auto text-white"
         xmlns="http://www.w3.org/2000/svg"
