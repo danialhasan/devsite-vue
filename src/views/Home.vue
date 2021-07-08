@@ -19,7 +19,8 @@ export default defineComponent({
             "Static website designed to bring Benford Roofing more clients, in combination with Google ads. ",
           image: "/assets/benfordroofing.png",
           githubLink: "https://github.com/danialhasan/roofing-company",
-          caseStudy: "/case-studies/roofingcompany",
+          caseStudy:
+            "https://www.notion.so/Benford-Roofing-1de3683dc4cb40c1b06917ab5161de90",
           link: "https://benfordroofing.com",
           rewriting: false,
         },
@@ -29,7 +30,8 @@ export default defineComponent({
             "This web app uses the CoinMarketCap API to retrieve data regarding 4 cryptocurrencies.",
           image: "/assets/cryptoapi.png",
           githubLink: "https://github.com/danialhasan/cryptoapi",
-          caseStudy: "/case-studies/crypto-api",
+          caseStudy:
+            "https://www.notion.so/Crypto-API-c9468a5ee5d34bc4bbc4f0ff1c2c8cc5",
           link: "https://crypto-api-dh.herokuapp.com/",
           rewriting: true,
         },
@@ -39,7 +41,8 @@ export default defineComponent({
             "This website (the one you're currently on) displays my portfolio of projects.",
           image: "/assets/portfoliosite.png",
           githubLink: "https://github.com/danialhasan/devsite-vue",
-          caseStudy: "/case-studies/portfoliosite",
+          caseStudy:
+            "https://www.notion.so/Portfolio-Site-1528fcdb950a4975a08883385857d34e",
           link: "https://hasandev.ca",
           rewriting: false,
         },
