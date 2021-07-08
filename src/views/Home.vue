@@ -21,6 +21,7 @@ export default defineComponent({
           githubLink: "https://github.com/danialhasan/roofing-company",
           caseStudy: "/case-studies/roofingcompany",
           link: "https://benfordroofing.com",
+          rewriting: false,
         },
         {
           title: "Crypto API",
@@ -30,6 +31,7 @@ export default defineComponent({
           githubLink: "https://github.com/danialhasan/cryptoapi",
           caseStudy: "/case-studies/crypto-api",
           link: "https://crypto-api-dh.herokuapp.com/",
+          rewriting: true,
         },
         {
           title: "Portfolio Site",
@@ -39,9 +41,10 @@ export default defineComponent({
           githubLink: "https://github.com/danialhasan/devsite-vue",
           caseStudy: "/case-studies/portfoliosite",
           link: "https://hasandev.ca",
+          rewriting: false,
         },
         {
-          title: "Crypto Address Tracer",
+          title: "Address Lookup ",
           description:
             "A web app built for a business with Vue, Node and MongoDB.",
           image: "/assets/cryptoaddresstracer.png",
@@ -49,6 +52,7 @@ export default defineComponent({
           caseStudy:
             "https://www.notion.so/Crypto-Address-Tracer-b261e0660926406e93d1da435a8002f5",
           link: "https://crypto-address-tracer.herokuapp.com/",
+          rewriting: true,
         },
       ],
       skills: {
@@ -346,7 +350,6 @@ export default defineComponent({
     <footer-component
       @contactClicked="scrollToForm"
       @mobileNavigationTo="scrollToSection"
-      @articlesClicked="scrollToTop"
     />
     <!-- The y value of the form for footer-component is different than the y value of the form for the top 
     contact-button component. See if it makes a difference with window.scrollto, fix if so.  -->

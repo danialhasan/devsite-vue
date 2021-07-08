@@ -25,6 +25,10 @@ export default {
       type: String,
       default: "",
     },
+    rewriting: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     viewProject(link) {
@@ -68,7 +72,24 @@ export default {
         lg:h-auto
       "
     >
-      <p class="text-2xl font-bold">{{ this.title }}</p>
+      <p class="text-2xl font-bold flex items-center">
+        {{ this.title }}
+        <span
+          v-if="rewriting"
+          class="
+            ml-2
+            py-[2px]
+            px-2
+            text-sm
+            rounded-lg
+            bg-yellow-400
+            text-gray-700
+            font-normal
+          "
+          >REWRITING</span
+        >
+        <!-- make tooltip pop up from top once hovered -->
+      </p>
       <p class="text-md py-2">{{ this.description }}</p>
       <div class="flex flex-row w-full h-auto pt-4 pb-2">
         <button

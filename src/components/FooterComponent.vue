@@ -331,11 +331,8 @@ export default {
             >
           </li>
           <li>
-            <router-link
-              to="/case-studies"
-              @click="$emit('caseStudiesClicked')"
-            >
-              Case Studies
+            <router-link to="/articles" @click="$emit('articlesClicked')">
+              Articles
             </router-link>
           </li>
         </ul>

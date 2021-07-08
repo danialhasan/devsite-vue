@@ -43,13 +43,20 @@ export default {
 };
 </script>
 <template>
-  <div>
+  <div
+    class="
+      lg:justify-self-center
+      lg:flex
+      lg:justify-center
+      md:max-w-[350px]
+      lg:max-w-[420px]
+      w-full
+    "
+  >
     <a :href="this.link" target="_blank">
-      <!-- need to get this links href to be dh.hashnode.dev/this.slug somehow -->
       <div
         class="
-          w-auto
-          lg:w-[360px]
+          w-full
           my-4
           border-2 border-soft-black
           h-auto
@@ -58,7 +65,7 @@ export default {
         "
       >
         <!-- image -->
-        <div class="w-full h-1/2 lg:h-[212px] overflow-hidden mx-auto">
+        <div class="w-full h-1/2 md:h-[212px] overflow-hidden mx-auto">
           <img
             :src="coverImage"
             class="w-full h-full lg:h-full object-center object-cover"

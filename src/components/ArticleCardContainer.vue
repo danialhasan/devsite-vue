@@ -67,16 +67,19 @@ export default {
 <template>
   <div
     class="
-      w-full
-      h-full
-      lg:flex lg:flex-row
-      lg:justify-evenly
-      lg:h-auto
-      max-w-screen-lg
-      lg:flex-wrap
-      mx-auto
-      mb-24
+      flex flex-col
+      space-y-4
+      md:space-y-0
+      md:grid md:grid-cols-2
+      xl:grid-cols-3
+      xl:max-w-screen-xl
+      md:gap-4
+      lg:gap-8
+      md:justify-items-center
+      lg:max-w-screen-lg
+      lg:mx-auto
       px-4
+      md:px-0
     "
   >
     <span v-if="loading" id="loading_icon" class="flex flex-col">
