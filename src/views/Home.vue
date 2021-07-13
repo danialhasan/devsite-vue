@@ -13,6 +13,7 @@ export default defineComponent({
   data() {
     return {
       projects: [
+        // NOTE: the 'rewriting' and 'building' properties are never both true. They're either opposites or they're both false.
         {
           title: "Benford Roofing",
           description:
@@ -23,6 +24,7 @@ export default defineComponent({
             "https://www.notion.so/Benford-Roofing-1de3683dc4cb40c1b06917ab5161de90",
           link: "https://benfordroofing.com",
           rewriting: false,
+          building: false,
         },
         {
           title: "Crypto API",
@@ -34,6 +36,7 @@ export default defineComponent({
             "https://www.notion.so/Crypto-API-c9468a5ee5d34bc4bbc4f0ff1c2c8cc5",
           link: "https://crypto-api-dh.herokuapp.com/",
           rewriting: true,
+          building: false,
         },
         {
           title: "Portfolio Site",
@@ -45,6 +48,7 @@ export default defineComponent({
             "https://www.notion.so/Portfolio-Site-1528fcdb950a4975a08883385857d34e",
           link: "https://hasandev.ca",
           rewriting: false,
+          building: false,
         },
         {
           title: "Address Lookup ",
@@ -56,6 +60,19 @@ export default defineComponent({
             "https://www.notion.so/Crypto-Address-Tracer-b261e0660926406e93d1da435a8002f5",
           link: "https://crypto-address-tracer.herokuapp.com/",
           rewriting: true,
+          building: false,
+        },
+        {
+          title: "Unsplash Clone",
+          description:
+            "A web app built for a business with Vue, Node and MongoDB.",
+          image: "/assets/project_image_placeholder.jpg",
+          githubLink: "https://github.com/danialhasan/unsplash_clone",
+          caseStudy:
+            "https://www.notion.so/Unsplash-Clone-01377fdd2cd4494c85c8bf1599caa8d6",
+          link: "https://unsplash-clone-dh.netlify.app/",
+          rewriting: false,
+          building: true,
         },
       ],
       skills: {
@@ -243,13 +260,14 @@ export default defineComponent({
         class="
           w-full
           max-w-screen-md
-          lg:max-w-screen-lg
+          lg:max-w-screen-xl
           mx-auto
           h-auto
           px-4
           md:px-16
           flex flex-col
-          lg:flex-row lg:flex-wrap
+          lg:grid lg:grid-cols-2
+          2xl:grid-cols-3
           lg:justify-evenly
           lg:items-stretch
           space-y-10

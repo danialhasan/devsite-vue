@@ -34,6 +34,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    building: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     viewProject(link) {
@@ -92,6 +96,20 @@ export default {
             font-normal
           "
           >REWRITING</span
+        >
+        <span
+          v-if="building"
+          class="
+            ml-2
+            py-[2px]
+            px-2
+            text-sm
+            rounded-lg
+            bg-blue-700
+            text-gray-50
+            font-normal
+          "
+          >BUILDING</span
         >
       </p>
       <p class="text-md py-2">{{ this.description }}</p>
