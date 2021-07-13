@@ -26,6 +26,7 @@ export default {
     },
   },
   mounted() {
+    this.changeResumeIcon();
     window.onstorage = this.changeResumeIcon;
   },
 };

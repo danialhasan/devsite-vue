@@ -4,10 +4,10 @@ import NotFound from './views/NotFound.vue'
 import Articles from './views/Articles.vue'
 import ArticleCardContainer from "./components/ArticleCardContainer.vue"
 
-/** @type {import('vue-router').RouterOptions['routes']} */
+/** .type {import('vue-router').RouterOptions['routes']} */
 export const routes = [{
     path: '/',
-    component: Home,
+    component: () => import('./views/Home.vue'),
     meta: {
       title: 'Home'
     },
@@ -18,23 +18,23 @@ export const routes = [{
     meta: {
       title: 'About'
     },
-    component: About,
+    component: () => import('./views/About.vue'),
     name: "About"
   },
 
   {
     path: '/articles',
-    component: Articles,
+    component: () => import('./views/Articles.vue'),
     name: "Articles",
     children: [{
       path: "", // "" acts as the base route, not "/"
-      component: ArticleCardContainer,
+      component: () => import('./components/ArticleCardContainer.vue'),
       name: "ArticleCardContainer"
     }, ],
   },
 
   {
     path: '/:path(.*)',
-    component: NotFound
+    component: () => import('./views/NotFound.vue')
   },
 ]
