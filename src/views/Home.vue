@@ -53,7 +53,7 @@ export default defineComponent({
         {
           title: "Address Lookup ",
           description:
-            "A web app built for a business with Vue, Node and MongoDB.",
+            "This web app lets you view the account balance of any Ethereum address.",
           image: "/assets/cryptoaddresstracer.png",
           githubLink: "https://github.com/danialhasan/crypto_address_tracer",
           caseStudy:
@@ -65,7 +65,7 @@ export default defineComponent({
         {
           title: "Unsplash Clone",
           description:
-            "A web app built for a business with Vue, Node and MongoDB.",
+            "This web app is a mix of Unsplash and Instagram. Integrated with AWS Rekognition, a machine-learning API.",
           image: "/assets/project_image_placeholder.jpg",
           githubLink: "https://github.com/danialhasan/unsplash_clone",
           caseStudy:
