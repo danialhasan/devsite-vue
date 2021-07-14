@@ -261,6 +261,7 @@ export default defineComponent({
           w-full
           max-w-screen-md
           lg:max-w-screen-xl
+          lg:justify-items-center
           mx-auto
           h-auto
           px-4
