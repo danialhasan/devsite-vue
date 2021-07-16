@@ -53,7 +53,7 @@ export default defineComponent({
         {
           title: "Address Lookup ",
           description:
-            "This web app lets you view the account balance of any Ethereum address.",
+            "This web app lets you view the account balance of any Ethereum address, alongside their token balances.",
           image: "/assets/cryptoaddresstracer.png",
           githubLink: "https://github.com/danialhasan/crypto_address_tracer",
           caseStudy:
@@ -260,7 +260,8 @@ export default defineComponent({
         class="
           w-full
           max-w-screen-md
-          lg:max-w-screen-xl
+          lg:max-w-screen-lg
+          2xl:max-w-screen-xl
           lg:justify-items-center
           mx-auto
           h-auto
