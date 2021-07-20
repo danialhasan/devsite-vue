@@ -52,7 +52,7 @@ export default {
       }
     },
     openResume() {
-      window.open("/assets/dh-resume.pdf", "_blank");
+      window.open("/assets/DanialHasan_Resume.pdf", "_blank");
     },
   },
   mounted() {
