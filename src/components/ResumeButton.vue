@@ -34,7 +34,7 @@ export default {
 
 <template>
   <button
-    @click="this.navigate('/assets/dh-resume.pdf', '_blank')"
+    @click="this.navigate('/assets/DanialHasan_Resume.pdf', '_blank')"
     class="
       mx-auto
       w-44
