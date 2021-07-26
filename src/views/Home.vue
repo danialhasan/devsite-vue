@@ -227,11 +227,15 @@ export default defineComponent({
         text-center
         w-full
         h-auto
-        mt-32
+        mt-20
+        md:mt-32
       "
     >
-      <h1 class="text-5xl">I'm Danial.</h1>
-      <h2 class="text-2xl my-4 px-24">I'm a full stack web developer.</h2>
+      <h1 class="text-5xl">Full Stack Web Developer</h1>
+      <h2 class="text-2xl font-normal my-4 px-12">
+        I build captivating web interfaces, supported by robust backend
+        infrastructure.
+      </h2>
       <div class="w-full h-auto flex flex-col lg:flex-row justify-center mt-12">
         <contact-button @clicked="scrollToForm" />
         <resume-button />
