@@ -288,7 +288,7 @@ export default {
         <div class="text-left font-normal flex flex-col space-y-6">
           <p>
             I'm a full stack Javascript web developer, and I've been programming
-            for the web for the last 3 years.
+            for the web for {{ new Date().getFullYear() - 2012 }} years.
           </p>
           <p>
             When I'm not writing code, I'm writing articles and
@@ -491,7 +491,7 @@ export default {
           <div class="text-left font-normal flex flex-col space-y-6">
             <p>
               I'm a full stack Javascript web developer, and I've been
-              programming for the web for the last 3 years.
+              programming for the web for {{ new Date().getFullYear() - 2017 }} years.
             </p>
             <p>
               When I'm not writing code, I'm writing articles and
