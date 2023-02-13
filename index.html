@@ -1,99 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="preload"
+            href="/font/Arima_Madurai/ArimaMadurai-Regular.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="/font/SF_Pro_Display/SF-Pro-Display-Regular.otf"
+            as="font"
+            type="font/otf"
+            crossorigin="anonymous"
+        />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preload" href="/font/Arima_Madurai/ArimaMadurai-Regular.ttf" as="font" type="font/ttf"
-    crossorigin="anonymous" />
-  <link rel="preload" href="/font/SF_Pro_Display/SF-Pro-Display-Regular.otf" as="font" type="font/otf"
-    crossorigin="anonymous" />
+        <link rel="preload" href="/assets/menu_dark.svg" as="image" />
+        <link rel="preload" href="/assets/menu_light.svg" as="image" />
+        <link rel="preload" href="/assets/download_light.svg" as="image" />
+        <link rel="preload" href="/assets/download_dark.svg" as="image" />
+        <link rel="preload" as="style" href="/font/fonts.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
 
-  <link rel="preload" href="/assets/menu_dark.svg" as="image">
-  <link rel="preload" href="/assets/menu_light.svg" as="image">
-  <link rel="preload" href="/assets/download_light.svg" as="image">
-  <link rel="preload" href="/assets/download_dark.svg" as="image">
-  <link rel="preload" as="style" href="/font/fonts.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <base href="#" class="cursor-pointer" />
 
-  <base href="#" class="cursor-pointer">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-5Y6ML83GZ1"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Y6ML83GZ1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+            gtag('config', 'G-5Y6ML83GZ1');
+        </script>
 
-    gtag('config', 'G-5Y6ML83GZ1');
-  </script>
-
-  <!-- Primary Meta Tags -->
-  <title>Danial Hasan - Portfolio</title>
-  <meta name="title" content="Danial Hasan - Portfolio">
-  <meta name="description"
-    content="Full stack Javascript web developer. I build cool things on the web with Vue, TailwindCSS, Node, Express, and MongoDB.">
-  <!-- 
+        <!-- Primary Meta Tags -->
+        <title>Danial Hasan - Portfolio</title>
+        <meta name="title" content="Danial Hasan - Portfolio" />
+        <meta
+            name="description"
+            content="Full stack Javascript web developer. I build cool things on the web with Vue, TailwindCSS, Node, Express, and MongoDB."
+        />
+        <!-- 
   Danial Hasan is a full stack web developer who builds web applications with Node.js, styles them with TailwindCSS and
   makes them dynamic with Javascript.
  -->
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.hasandev.ca/">
-  <meta property="og:title" content="Danial Hasan - Portfolio">
-  <meta property="og:description"
-    content="Full stack Javascript web developer. I build cool things on the web with Vue, TailwindCSS, Node, Express, and MongoDB.">
-  <meta property="og:image" content="./assets/socialmediaimage.jpg">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.hasandev.ca/" />
+        <meta property="og:title" content="Danial Hasan - Portfolio" />
+        <meta
+            property="og:description"
+            content="Full stack Javascript web developer. I build cool things on the web with Vue, TailwindCSS, Node, Express, and MongoDB."
+        />
+        <meta property="og:image" content="./assets/socialmediaimage.jpg" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.hasandev.ca/">
-  <meta property="twitter:title" content="Danial Hasan - Portfolio">
-  <meta property="twitter:description" content="Full stack Javascript web developer. I build cool things on the web with Vue, TailwindCSS, Node, Express,
-    and MongoDB.">
-  <meta property="twitter:image" content="./assets/socialmediaimage.jpg">
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.hasandev.ca/" />
+        <meta property="twitter:title" content="Danial Hasan - Portfolio" />
+        <meta
+            property="twitter:description"
+            content="Full stack Javascript web developer. I build cool things on the web with Vue, TailwindCSS, Node, Express,
+    and MongoDB."
+        />
+        <meta
+            property="twitter:image"
+            content="./assets/socialmediaimage.jpg"
+        />
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
-  <link rel="manifest" href="./assets/favicons/site.webmanifest">
-  <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicons/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="./assets/favicons/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
 
-  <!-- Dark mode setup for localstorage -->
-  <script>
-    const html = document.getElementsByTagName('html')[0];
+        <!-- Dark mode setup for localstorage -->
+        <script>
+            const html = document.getElementsByTagName('html')[0];
 
-    // add dark mode preference to localstorage if it doesnt exist
-    if (localStorage.theme === null || localStorage.theme === undefined || localStorage.theme === "dark") {
-      localStorage.theme =
-        'light';
-    }
+            // add dark mode preference to localstorage if it doesnt exist
+            if (
+                localStorage.theme === null ||
+                localStorage.theme === undefined ||
+                localStorage.theme === 'dark'
+            ) {
+                localStorage.theme = 'light';
+            }
 
-    if (localStorage.theme === 'dark') {
-      html.classList.add('dark')
-    } else {
-      html.classList.remove('dark')
-    }
-  </script>
-</head>
+            if (localStorage.theme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        </script>
+    </head>
 
-<body class="dark:bg-soft-black-background transition-all ">
-  <form name="devsite-contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-    <!-- <input type="hidden" name="form-name" value="devsite-contact" /> -->
-    <input type="text" name="name">
-    <input type="text" name="email">
-    <textarea type="text" name="message"></textarea>
-  </form>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
-</body>
-
+    <body class="dark:bg-soft-black-background transition-all">
+        <form
+            name="devsite-contact"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            hidden
+        >
+            <!-- <input type="hidden" name="form-name" value="devsite-contact" /> -->
+            <input type="text" name="name" />
+            <input type="text" name="email" />
+            <textarea type="text" name="message"></textarea>
+        </form>
+        <div id="app"></div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
 </html>
