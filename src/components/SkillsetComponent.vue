@@ -1,9 +1,6 @@
 <script>
 export default {
     name: 'Skillset Component',
-    data() {
-        return {};
-    },
     props: {
         title: {
             type: String,
@@ -22,6 +19,9 @@ export default {
             default: 3,
         },
     },
+    data() {
+        return {};
+    },
     methods: {},
 };
 </script>
@@ -33,16 +33,16 @@ export default {
             <div class="flex flex-row justify-between">
                 <div class="w-[54px] h-[54px] object-cover flex">
                     <img
-                        :src="this.image"
+                        :src="image"
                         alt="Logo of specified skillset"
                         srcset=""
                     />
                 </div>
 
-                <p>{{ this.experience }}+ years of experience</p>
+                <p>{{ experience }}+ years of experience</p>
             </div>
-            <h3 class="font-semibold text-2xl py-4">{{ this.title }}</h3>
-            <p>{{ this.description }}</p>
+            <h3 class="font-semibold text-2xl py-4">{{ title }}</h3>
+            <p>{{ description }}</p>
         </div>
     </div>
 </template>

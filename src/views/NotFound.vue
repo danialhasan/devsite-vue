@@ -2,10 +2,11 @@
 import Navbar from '@/components/Navbar.vue';
 export default {
     name: 'NotFound',
+    components: { Navbar },
+    props: [],
     data() {
         return {};
     },
-    props: [],
     methods: {
         buttonHovered() {
             const button = document.querySelector('button');
@@ -20,7 +21,6 @@ export default {
             styles.map((style) => button.classList.toggle(style));
         },
     },
-    components: { Navbar },
 };
 </script>
 <template>

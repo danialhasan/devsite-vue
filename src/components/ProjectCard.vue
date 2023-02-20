@@ -1,10 +1,5 @@
 <script>
 export default {
-    data() {
-        return {
-            tooltipHovered: false,
-        };
-    },
     props: {
         image: {
             type: String,
@@ -39,6 +34,11 @@ export default {
             default: false,
         },
     },
+    data() {
+        return {
+            tooltipHovered: false,
+        };
+    },
     methods: {
         viewProject(link) {
             window.open(link, '_blank');
@@ -55,11 +55,11 @@ export default {
     >
         <div
             class="w-full h-1/2 lg:h-auto lg:flex-grow hover:cursor-pointer"
-            @click="viewProject(this.link)"
+            @click="viewProject(link)"
         >
             <img
                 class="w-full h-full"
-                :src="this.image"
+                :src="image"
                 alt="Project card image"
                 srcset=""
                 draggable="false"
@@ -69,7 +69,7 @@ export default {
             class="w-full h-1/2 py-4 px-6 bg-white dark:bg-soft-black-foreground lg:h-auto"
         >
             <p class="text-2xl font-bold flex items-center">
-                {{ this.title }}
+                {{ title }}
                 <span
                     v-if="rewriting"
                     class="ml-2 py-[2px] px-2 text-sm rounded-lg bg-yellow-400 text-gray-700 font-normal"
@@ -81,11 +81,11 @@ export default {
                     >BUILDING</span
                 >
             </p>
-            <p class="text-md py-2">{{ this.description }}</p>
+            <p class="text-md py-2">{{ description }}</p>
             <div class="flex flex-row w-full h-auto pt-4 pb-2">
                 <button
-                    @click="goToCaseStudy(this.caseStudy)"
                     class="uppercase bg-soft-black-foreground text-soft-white dark:bg-soft-white dark:text-soft-black-background px-6 py-2 rounded-lg"
+                    @click="goToCaseStudy(caseStudy)"
                 >
                     More Info
                     <svg
@@ -103,7 +103,7 @@ export default {
                         />
                     </svg>
                 </button>
-                <a target="_blank" :href="this.githubLink">
+                <a target="_blank" :href="githubLink">
                     <button
                         class="uppercase text-soft-black-foreground border-2 border-soft-black-background dark:text-soft-white dark:border-soft-white px-6 py-2 rounded-lg ml-6"
                     >

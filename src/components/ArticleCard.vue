@@ -1,8 +1,5 @@
 <script>
 export default {
-    data() {
-        return { link: '', date: '' };
-    },
     props: {
         coverImage: {
             type: String,
@@ -26,6 +23,13 @@ export default {
             required: true,
         },
     },
+    data() {
+        return { link: '', date: '' };
+    },
+    created() {
+        this.setLink();
+        this.setDate();
+    },
     methods: {
         setLink() {
             this.link = 'https://dh.hashnode.dev/' + this.slug;
@@ -36,17 +40,13 @@ export default {
             console.log(this.date);
         },
     },
-    created() {
-        this.setLink();
-        this.setDate();
-    },
 };
 </script>
 <template>
     <div
         class="lg:justify-self-center lg:flex lg:justify-center md:max-w-[350px] lg:max-w-[420px] w-full"
     >
-        <a :href="this.link" target="_blank">
+        <a :href="link" target="_blank">
             <div
                 class="w-full my-4 border-2 border-soft-black h-auto lg:flex lg:flex-col xl:mr-6"
             >
@@ -65,7 +65,7 @@ export default {
                 >
                     <span
                         class="text-xs leading-loose text-soft-black-foreground dark:text-soft-white dark:opacity-95 opacity-80 font-bold"
-                        >POSTED {{ this.date }}</span
+                        >POSTED {{ date }}</span
                     >
                     <h3 class="font-bold text-base">
                         {{ title }}

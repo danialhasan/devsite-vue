@@ -1,4 +1,5 @@
 const Home = () => import('./views/Home.vue');
+const Calendly = () => import('./views/Calendly.vue');
 const About = () => import('./views/About.vue');
 const NotFound = () => import('./views/NotFound.vue');
 const Articles = () => import('./views/Articles.vue');
@@ -19,7 +20,9 @@ export const routes = [
         path: '/calendly',
         meta: {
             title: 'Danial`s Calendly',
-        },
+      },
+      name: "Calendly",
+        component: Calendly
     },
     {
         path: '/about',

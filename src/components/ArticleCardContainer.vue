@@ -3,6 +3,9 @@ import ArticleCard from './ArticleCard.vue';
 
 export default {
     name: 'Article Card Container',
+    components: {
+        ArticleCard,
+    },
     data() {
         return {
             // this will be filled with article info from the hashnode api.
@@ -25,8 +28,8 @@ export default {
             loading: true,
         };
     },
-    components: {
-        ArticleCard,
+    created() {
+        this.getArticles({ page: 0 });
     },
     methods: {
         async displayArticles(articles) {
@@ -58,9 +61,6 @@ export default {
                 console.error(error);
             }
         },
-    },
-    created() {
-        this.getArticles({ page: 0 });
     },
 };
 </script>
@@ -96,7 +96,7 @@ export default {
             Loading articles...</span
         >
         <article-card
-            v-for="article in this.articleData"
+            v-for="article in articleData"
             :key="article._id"
             v-bind="article"
         />

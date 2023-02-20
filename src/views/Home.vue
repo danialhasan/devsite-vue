@@ -10,6 +10,16 @@ import Banner from '@/components/Banner.vue';
 import SkillsetComponent from '@/components/SkillsetComponent.vue';
 
 export default defineComponent({
+    components: {
+        ButtonRepo,
+        Navbar,
+        ContactButton,
+        ResumeButton,
+        ProjectCard,
+        FooterComponent,
+        Banner,
+        SkillsetComponent,
+    },
     data() {
         return {
             projects: [
@@ -134,16 +144,6 @@ export default defineComponent({
             },
         };
     },
-    components: {
-        ButtonRepo,
-        Navbar,
-        ContactButton,
-        ResumeButton,
-        ProjectCard,
-        FooterComponent,
-        Banner,
-        SkillsetComponent,
-    },
     methods: {
         scrollToForm() {
             const footer = document.getElementById('footer');
@@ -251,7 +251,7 @@ export default defineComponent({
                 class="w-full max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl lg:justify-items-center mx-auto h-auto px-4 md:px-16 flex flex-col lg:grid lg:grid-cols-2 2xl:grid-cols-3 lg:justify-evenly lg:items-stretch space-y-10 lg:space-y-0"
             >
                 <div
-                    v-for="project in this.projects"
+                    v-for="project in projects"
                     :key="project"
                     class="lg:max-w-[440px] lg:h-auto lg:p-4"
                 >

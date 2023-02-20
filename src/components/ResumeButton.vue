@@ -1,5 +1,9 @@
 <script>
 export default {
+    mounted() {
+        this.changeResumeIcon();
+        window.onstorage = this.changeResumeIcon;
+    },
     methods: {
         navigate(url, target) {
             window.open(url, target);
@@ -25,17 +29,13 @@ export default {
             }
         },
     },
-    mounted() {
-        this.changeResumeIcon();
-        window.onstorage = this.changeResumeIcon;
-    },
 };
 </script>
 
 <template>
     <button
-        @click="this.navigate('/assets/DanialHasan_Resume.pdf', '_blank')"
         class="mx-auto w-44 h-16 mt-2 lg:my-0 lg:mx-2 border-accent-1 border-2 text-2xl text-black-2 rounded-xl flex justify-center items-center transition-all hover:-mt-1"
+        @click="navigate('/assets/DanialHasan_Resume.pdf', '_blank')"
     >
         <span class="w-6 h-6 mr-2">
             <!-- <img
