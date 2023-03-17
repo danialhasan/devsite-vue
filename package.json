@@ -33,6 +33,6 @@
     "prettier": "^2.8.4",
     "prettier-eslint": "^15.0.1",
     "tailwindcss": "^2.1.4",
-    "vite": "^2.3.7"
+    "vite": "^4.2.0"
   }
 }
