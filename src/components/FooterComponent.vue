@@ -301,7 +301,7 @@ export default {
                   srcset=""
               /></a>
               <!-- NOTE: IMAGE SRC ATTRIBUTES MUST HAVE /ASSETS AT FRONT, NOT ASSETS, OTHERWISE BUILD WILL FAIL. -->
-              <a href="https://www.linkedin.com/in/ππ/" target="_blank"
+              <a href="https://www.linkedin.com/in/dhasandev/" target="_blank"
                 ><img
                   class="w-11 h-11 mx-2"
                   src="/assets/linkedin.png"
